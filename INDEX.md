@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-05-08 Windows 11 下用 AGENTS.md 给 Amp 配置预加载系统 prompt](./sessions/2026-05-08-win11-amp-agents-md-config.md) — 在 Win11 下创建 `.config/amp/AGENTS.md` 并通过 `@` 引用本仓库 AGENTS.md，实现 Amp 跨会话自动加载系统 prompt。
 - [2026-05-08 初始化仓库](./sessions/2026-05-08-init-repo.md) — 搭建目录结构、写下 AGENTS.md / README / 模板。
 
 ## Decisions
