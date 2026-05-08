@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# 个人草稿（不想入库的临时笔记可放这里）
+scratch/
+*.draft.md
