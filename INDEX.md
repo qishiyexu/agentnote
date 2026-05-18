@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-05-08
+最后更新：2026-05-18
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-05-18 安装 opencli-weixin-album 并下载哥飞合集](./sessions/2026-05-18-install-opencli-weixin-album-and-download-gefei.md) — 在 Windows 下安装 OpenCLI 微信合集下载插件，并完成“养网站防老”247 篇文章与图片的本地备份。
 - [2026-05-08 Windows 11 下用 AGENTS.md 给 Amp 配置预加载系统 prompt](./sessions/2026-05-08-win11-amp-agents-md-config.md) — 在 Win11 下创建 `.config/amp/AGENTS.md` 并通过 `@` 引用本仓库 AGENTS.md，实现 Amp 跨会话自动加载系统 prompt。
 - [2026-05-08 初始化仓库](./sessions/2026-05-08-init-repo.md) — 搭建目录结构、写下 AGENTS.md / README / 模板。
 
@@ -23,7 +24,8 @@ _（暂无，待第一次实质性讨论后产生。）_
 
 ## References
 
-_（暂无。所有外链都需在此登记。）_
+- [opencli-weixin-album](./references/opencli-weixin-album.md) — OpenCLI 微信公众号合集文章下载插件。
+- [OpenCLI](./references/opencli.md) — 命令行工具与 Browser Bridge 插件运行时。
 
 ---
 
