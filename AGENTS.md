@@ -6,7 +6,7 @@
 
 ---
 
-## 0. 三条铁律
+## 0. 铁律
 
 1. **写下来 > 记在脑子里**：任何稍有价值的讨论结论、设计取舍、外部引用，立刻落到对应文档中并 `git commit`。
 2. **链接 > 复制**：跨文档引用一律使用相对路径链接，不要复制粘贴大段内容（避免事实漂移）。
@@ -33,9 +33,10 @@
 
 ---
 
-## 2. 四种文档的写作规范
+## 2. 文档的写作规范
 
 ### 2.1 sessions/ — 会话日志
+
 - 文件名：`YYYY-MM-DD-<slug>.md`，例如 `2026-05-08-init-repo.md`
 - 一次会话一篇，**当天就写**，不要攒。
 - 必含字段（见 [templates/session.md](./templates/session.md)）：
@@ -47,19 +48,26 @@
   - `引用`：链接到 references/ 中的条目
 
 ### 2.2 decisions/ — 决策记录（ADR）
+
 - 文件名：`NNNN-<slug>.md`，4 位递增编号，例如 `0001-use-markdown-only.md`
 - 一旦写定，**只追加修订记录，不重写历史**。
 - 字段：背景 / 选项 / 决策 / 理由 / 影响 / 状态（Proposed / Accepted / Superseded by NNNN）。
 
 ### 2.3 topics/ — 主题笔记
+
 - 文件名：`<slug>.md`，例如 `prompt-engineering.md`
 - 一个主题一篇，**会被反复编辑**。
 - 顶部维护"最后更新时间"和"相关 sessions / decisions"链接。
 
 ### 2.4 references/ — 外部引用
+
 - 文件名：`<slug>.md`，例如 `anthropic-prompt-caching.md`
 - 字段：标题 / URL / 作者 / 访问日期 / 关键摘录 / 我们的备注。
 - **所有外链都先在这里登记**，其它文档引用时链到此文件，而不是直接放裸 URL。
+
+## 2.5 文章生成
+
+- 如果主体是生成文章，要使用humanizer这个skill去AI味。
 
 ---
 
@@ -73,16 +81,8 @@
 
 ## 4. 提交规范（Conventional Commits 简化版）
 
-```
-session:   <date> <slug>            新增/更新会话日志
-decision:  <NNNN> <slug>            新增/更新决策
-topic:     <slug>                   新增/更新主题笔记
-ref:       <slug>                   新增/更新引用
-docs:      <说明>                   README/AGENTS/INDEX 等元文档
-chore:     <说明>                   其它杂项
-```
+- 如果需要提交，先读COMMIT.md
 
-**每次离开仓库前必须 `git push`**，否则换机器就丢了。
 
 ---
 
@@ -94,11 +94,3 @@ chore:     <说明>                   其它杂项
 - ❌ 一次 commit 涉及多个无关话题
 - ❌ 写完不更新 INDEX.md
 - ❌ 写完不 push
-
----
-
-## 6. 给人类协作者
-
-- 你和 Agent 讨论时，可以让 Agent **边聊边写**到对应 session 文件。
-- 讨论结束后，让 Agent 总结：哪些进了 topic、哪些升格为 decision、哪些只是 session 内容。
-- 如果你换了机器/换了 Agent：`git pull` → 让新 Agent 读 `AGENTS.md` + `INDEX.md` + 最近一个 session，即可继续。
