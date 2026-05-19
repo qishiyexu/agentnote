@@ -18,6 +18,8 @@
 4. 生成并保存月光精灵森林 bitmap hero 图，作为网站首屏背景资产。
 5. 实现筛选与交互：male / female / neutral，DND / Pathfinder / KOTLC / funny / dark / adult/mature，name + meaning，real name deterministic mode，大量结果列表，一键复制，多次刷新。
 6. 运行 `npm run build` 和 `npm run lint` 均通过；用本地 Chrome headless 检查桌面和紧凑移动视口截图。
+7. 根据 npm audit 提示升级依赖到 Next.js 16、React 19、ESLint 9，并迁移到 Next 16 可用的 flat ESLint 配置与显式 404 页面。
+8. 升级后再次运行 `npm run build` 和 `npm run lint` 均通过；高危级别 audit 已清零，npm 6 下仍会显示 `next > postcss` 的中等 manual-review 项。
 
 ## 结论
 
@@ -25,11 +27,13 @@
 2. `adult/mature` 在站内定义为严肃、古老、阴郁、成熟的非露骨风格，降低合规风险。
 3. KOTLC 相关文案使用 fan-inspired / unofficial 表述，不声明官方关联。
 4. 真实姓名模式只在浏览器本地用哈希选择名字部件，不需要存储用户输入。
+5. npm 6 会忽略 `package.json` 的 `overrides` 字段，因此本机 audit 仍可能看到 Next 内部固定依赖的 PostCSS 提示；项目已在顶层固定 `postcss@8.5.10` 并为新版 npm / Vercel 添加 override。
 
 ## 待办
 
 - [ ] 如需正式上线，连接 Vercel 项目并配置最终域名。
 - [ ] 上线后可继续补充 sitemap、robots、更多 FAQ 和长尾页面。
+- [ ] 等 Next.js 后续版本更新内部 PostCSS 依赖后，可再次运行 `npm audit` 确认中等项消失。
 
 ## 产出
 
