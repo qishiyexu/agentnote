@@ -20,6 +20,7 @@
 6. 运行 `npm run build` 和 `npm run lint` 均通过；用本地 Chrome headless 检查桌面和紧凑移动视口截图。
 7. 根据 npm audit 提示升级依赖到 Next.js 16、React 19、ESLint 9，并迁移到 Next 16 可用的 flat ESLint 配置与显式 404 页面。
 8. 升级后再次运行 `npm run build` 和 `npm run lint` 均通过；高危级别 audit 已清零，npm 6 下仍会显示 `next > postcss` 的中等 manual-review 项。
+9. 增加 sourced-name mode：从 `data/elfnames.db` 导出 `data/elfnames.generated.json`，前端可勾选 `Use sourced names`，按性别和场景筛选有出处的名字并抽取音节生成新名字，同时显示 based-on 来源信息。
 
 ## 结论
 
@@ -28,12 +29,14 @@
 3. KOTLC 相关文案使用 fan-inspired / unofficial 表述，不声明官方关联。
 4. 真实姓名模式只在浏览器本地用哈希选择名字部件，不需要存储用户输入。
 5. npm 6 会忽略 `package.json` 的 `overrides` 字段，因此本机 audit 仍可能看到 Next 内部固定依赖的 PostCSS 提示；项目已在顶层固定 `postcss@8.5.10` 并为新版 npm / Vercel 添加 override。
+6. 为保持 Vercel 部署简单，SQLite 数据库不在运行时读取；构建时使用已导出的 JSON 静态数据，更新数据库后运行 `npm run export:elfnames` 刷新。
 
 ## 待办
 
 - [ ] 如需正式上线，连接 Vercel 项目并配置最终域名。
 - [ ] 上线后可继续补充 sitemap、robots、更多 FAQ 和长尾页面。
 - [ ] 等 Next.js 后续版本更新内部 PostCSS 依赖后，可再次运行 `npm audit` 确认中等项消失。
+- [ ] 如继续扩充数据库，可补充 Pathfinder / KOTLC 相关来源，并重新导出 JSON。
 
 ## 产出
 
