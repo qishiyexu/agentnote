@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-05-19
+最后更新：2026-05-20
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-05-20 调整 Elf Name Generator 标签与页面控件](./sessions/2026-05-20-refine-elf-generator-ui.md) — 让名字标签动态化，移除 Count 控件，并去掉 FAQ 区块。
 - [2026-05-19 制作 Elf Name Generator 英文网站](./sessions/2026-05-19-build-elf-name-generator-site.md) — 从空仓库实现 Next.js 英文精灵名生成器网站，并完成本地构建与视觉检查。
 - [2026-05-18 总结哥飞“养网站防老”文章合集](./sessions/2026-05-18-summarize-gefei-yangwangzhan-articles.md) — 将 247 篇本地文章归纳为一份 Markdown 总摘要。
 - [2026-05-18 安装 opencli-weixin-album 并下载哥飞合集](./sessions/2026-05-18-install-opencli-weixin-album-and-download-gefei.md) — 在 Windows 下安装 OpenCLI 微信合集下载插件，并完成“养网站防老”247 篇文章与图片的本地备份。
