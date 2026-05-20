@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-05-20
+最后更新：2026-05-21
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-05-21 去掉 Elf Name Generator 重复的 Related generators](./sessions/2026-05-21-remove-duplicate-related-generators.md) — 删除下方重复的相关生成器导航，保留首屏内部链接。
 - [2026-05-20 优化 Elf Name Generator 首屏布局](./sessions/2026-05-20-improve-elf-generator-layout.md) — 调整生成器布局，让结果列表和 Generate 按钮在桌面与移动端都更显眼。
 - [2026-05-20 补充 Elf Name Generator 子页面](./sessions/2026-05-20-add-elf-generator-pages.md) — 新增 KOTLC、dark、adult、neutral 和 elf names 页面，并修复 Next 16 动态路由参数。
 - [2026-05-20 调整 Elf Name Generator 标签与页面控件](./sessions/2026-05-20-refine-elf-generator-ui.md) — 让名字标签动态化，移除 Count 控件，并去掉 FAQ 区块。
