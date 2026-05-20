@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-05-20 优化 Elf Name Generator 首屏布局](./sessions/2026-05-20-improve-elf-generator-layout.md) — 调整生成器布局，让结果列表和 Generate 按钮在桌面与移动端都更显眼。
 - [2026-05-20 补充 Elf Name Generator 子页面](./sessions/2026-05-20-add-elf-generator-pages.md) — 新增 KOTLC、dark、adult、neutral 和 elf names 页面，并修复 Next 16 动态路由参数。
 - [2026-05-20 调整 Elf Name Generator 标签与页面控件](./sessions/2026-05-20-refine-elf-generator-ui.md) — 让名字标签动态化，移除 Count 控件，并去掉 FAQ 区块。
 - [2026-05-19 制作 Elf Name Generator 英文网站](./sessions/2026-05-19-build-elf-name-generator-site.md) — 从空仓库实现 Next.js 英文精灵名生成器网站，并完成本地构建与视觉检查。
