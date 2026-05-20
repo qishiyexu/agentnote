@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-05-20 补充 Elf Name Generator 子页面](./sessions/2026-05-20-add-elf-generator-pages.md) — 新增 KOTLC、dark、adult、neutral 和 elf names 页面，并修复 Next 16 动态路由参数。
 - [2026-05-20 调整 Elf Name Generator 标签与页面控件](./sessions/2026-05-20-refine-elf-generator-ui.md) — 让名字标签动态化，移除 Count 控件，并去掉 FAQ 区块。
 - [2026-05-19 制作 Elf Name Generator 英文网站](./sessions/2026-05-19-build-elf-name-generator-site.md) — 从空仓库实现 Next.js 英文精灵名生成器网站，并完成本地构建与视觉检查。
 - [2026-05-18 总结哥飞“养网站防老”文章合集](./sessions/2026-05-18-summarize-gefei-yangwangzhan-articles.md) — 将 247 篇本地文章归纳为一份 Markdown 总摘要。
