@@ -20,10 +20,13 @@ Don + Codex
 - 移动端调整顺序：标题简介之后优先显示结果区和 Generate，再显示选项与相关页面链接。
 - 将 hero 图片改为 CSS 背景，避免图片层级覆盖交互内容。
 - 收紧移动端文本、结果卡和复制按钮的伸缩规则，减少小屏横向溢出风险。
+- 后续根据反馈再次调整桌面比例：左侧文案区收窄，右侧生成器区扩到主要宽度，结果列在生成器内部继续加宽、加高。
 
 ## 结论
 
 生成类 SEO 页面首屏应先暴露可用结果和主操作，而不是让页面链接或完整筛选控件占据移动端首屏。筛选项仍保留，但在小屏下应让位给结果浏览和刷新生成。
+
+桌面端的视觉权重应落在生成器结果区，而不是品牌标题。左侧适合承载简短说明和内部链接，右侧应保留足够宽度给名字列表、复制按钮和 Generate 操作。
 
 ## 待办
 
@@ -34,6 +37,7 @@ Don + Codex
 - 更新 `D:\Don\Projects\elfnamegenerator\components\Generator.tsx`
 - 更新 `D:\Don\Projects\elfnamegenerator\app\globals.css`
 - 本地验证 `npm run build`、`npm run lint`
+- 二次调整后再次验证 `npm run build`、`npm run lint`，并保存桌面/移动端截图。
 
 ## 引用
 
