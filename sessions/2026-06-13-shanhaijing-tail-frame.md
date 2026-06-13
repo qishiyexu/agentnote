@@ -17,6 +17,7 @@
 - 生成尾帧画面：古籍仍在木桌上，书页中心发光，山川、河流、矿物、草木、怪兽、神明和异国人像以手绘分层纸雕/水墨草图形式从页面中浮现。
 - 将生成结果复制回项目目录，作为 storyboard 可继续使用的资产。
 - 继续生成“异国人像图层”单独画面：一组异国人物以古籍插图、半透明纸雕层的形式从书页中浮现，便于作为动画局部插入素材。
+- 继续生成“小说幻想转古籍档案”动画首尾帧：第一帧保留少年打怪升级与小说人物剪影，卷轴开始覆盖；尾帧中人物剪影淡出，幻想画面被卷轴转译为古籍档案。
 
 ## 结论
 
@@ -30,6 +31,8 @@
 
 - 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\shot-04-tail-frame.png`
 - 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\shot-04-foreign-figures-layer.png`
+- 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\novel-archive-transition-first.png`
+- 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\novel-archive-transition-tail.png`
 
 ## 引用
 
