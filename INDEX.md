@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-13 生成《山海经》古籍展开动画尾帧](./sessions/2026-06-13-shanhaijing-tail-frame.md) — 基于首帧古籍图生成山海世界从书页中展开的尾帧资产。
 - [2026-05-21 检查 Elf Name Generator 的 Vercel 部署适配](./sessions/2026-05-21-vercel-readiness-elf-name-generator.md) — 确认站点适合 Vercel，并补充部署配置、SEO metadata routes 与设计文档。
 - [2026-05-21 去掉 Elf Name Generator 重复的 Related generators](./sessions/2026-05-21-remove-duplicate-related-generators.md) — 删除下方重复的相关生成器导航，保留首屏内部链接。
 - [2026-05-20 优化 Elf Name Generator 首屏布局](./sessions/2026-05-20-improve-elf-generator-layout.md) — 调整生成器布局，让结果列表和 Generate 按钮在桌面与移动端都更显眼。
