@@ -16,6 +16,7 @@
 - 将原图定位为首帧参考，而不是局部修图目标。
 - 生成尾帧画面：古籍仍在木桌上，书页中心发光，山川、河流、矿物、草木、怪兽、神明和异国人像以手绘分层纸雕/水墨草图形式从页面中浮现。
 - 将生成结果复制回项目目录，作为 storyboard 可继续使用的资产。
+- 继续生成“异国人像图层”单独画面：一组异国人物以古籍插图、半透明纸雕层的形式从书页中浮现，便于作为动画局部插入素材。
 
 ## 结论
 
@@ -28,6 +29,7 @@
 ## 产出
 
 - 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\shot-04-tail-frame.png`
+- 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\shot-04-foreign-figures-layer.png`
 
 ## 引用
 
