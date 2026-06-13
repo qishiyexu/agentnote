@@ -18,6 +18,7 @@
 - 将生成结果复制回项目目录，作为 storyboard 可继续使用的资产。
 - 继续生成“异国人像图层”单独画面：一组异国人物以古籍插图、半透明纸雕层的形式从书页中浮现，便于作为动画局部插入素材。
 - 继续生成“小说幻想转古籍档案”动画首尾帧：第一帧保留少年打怪升级与小说人物剪影，卷轴开始覆盖；尾帧中人物剪影淡出，幻想画面被卷轴转译为古籍档案。
+- 因原第一帧上传 Vidu 提示违反政策，生成平台友好修复版：去掉打斗、攻击、受伤、威胁怪兽和升级文字，将“少年打怪升级”改写为“少年行者和平觉醒，神兽作为守护幻影出现”。
 
 ## 结论
 
@@ -33,6 +34,7 @@
 - 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\shot-04-foreign-figures-layer.png`
 - 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\novel-archive-transition-first.png`
 - 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\novel-archive-transition-tail.png`
+- 新建：`D:\Don\Projects\山海经\outputs\scene-03-05-storyboard\novel-archive-transition-first-vidu-safe.png`
 
 ## 引用
 
