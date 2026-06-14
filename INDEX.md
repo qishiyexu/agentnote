@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-05-21
+最后更新：2026-06-14
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-06-14 添加 Agnes 视频生成能力](./sessions/2026-06-14-add-agnes-video-capability.md) — 记录 `agnes_video_tool.py` 作为后续 agent 可复用的视频生成能力。
 - [2026-06-13 生成《山海经》古籍展开动画尾帧](./sessions/2026-06-13-shanhaijing-tail-frame.md) — 基于首帧古籍图生成山海世界从书页中展开的尾帧资产。
 - [2026-05-21 检查 Elf Name Generator 的 Vercel 部署适配](./sessions/2026-05-21-vercel-readiness-elf-name-generator.md) — 确认站点适合 Vercel，并补充部署配置、SEO metadata routes 与设计文档。
 - [2026-05-21 去掉 Elf Name Generator 重复的 Related generators](./sessions/2026-05-21-remove-duplicate-related-generators.md) — 删除下方重复的相关生成器导航，保留首屏内部链接。
@@ -28,7 +29,7 @@
 
 ## Topics
 
-_（暂无，待第一次实质性讨论后产生。）_
+- [Agnes 视频生成能力](./topics/agnes-video-generation.md) — 使用 `D:\Don\Projects\agnes\agnes_video_tool.py` 调用 Agnes AI 生成、轮询并下载视频。
 
 ## References
 
