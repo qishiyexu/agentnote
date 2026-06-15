@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-15 生成《山海经》地理考察分镜视频](./sessions/2026-06-15-shanhaijing-geography-storyboard-video.md) — 基于四张古籍分镜使用 Agnes 生成 15 秒视频，并记录输出路径与校验结果。
 - [2026-06-14 添加 Agnes 视频生成能力](./sessions/2026-06-14-add-agnes-video-capability.md) — 记录 `agnes_video_tool.py` 作为后续 agent 可复用的视频生成能力。
 - [2026-06-13 生成《山海经》古籍展开动画尾帧](./sessions/2026-06-13-shanhaijing-tail-frame.md) — 基于首帧古籍图生成山海世界从书页中展开的尾帧资产。
 - [2026-05-21 检查 Elf Name Generator 的 Vercel 部署适配](./sessions/2026-05-21-vercel-readiness-elf-name-generator.md) — 确认站点适合 Vercel，并补充部署配置、SEO metadata routes 与设计文档。
