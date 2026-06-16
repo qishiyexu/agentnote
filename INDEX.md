@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-06-14
+最后更新：2026-06-16
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-06-16 生成《山海经》怪物分镜与 Vidu 转场词](./sessions/2026-06-16-shanhaijing-monster-storyboard-vidu.md) — 基于九尾狐、烛龙、相柳口播文案生成 6 帧一致尺寸分镜图，并整理相邻帧转场提示词。
 - [2026-06-15 生成《山海经》地理考察分镜视频](./sessions/2026-06-15-shanhaijing-geography-storyboard-video.md) — 基于四张古籍分镜使用 Agnes 生成 15 秒视频，并记录输出路径与校验结果。
 - [2026-06-14 添加 Agnes 视频生成能力](./sessions/2026-06-14-add-agnes-video-capability.md) — 记录 `agnes_video_tool.py` 作为后续 agent 可复用的视频生成能力。
 - [2026-06-13 生成《山海经》古籍展开动画尾帧](./sessions/2026-06-13-shanhaijing-tail-frame.md) — 基于首帧古籍图生成山海世界从书页中展开的尾帧资产。
