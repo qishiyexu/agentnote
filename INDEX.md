@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-06-16
+最后更新：2026-06-18
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-06-18 审查 Elf Name Generator 的 AdSense 通过率](./sessions/2026-06-18-audit-elf-name-generator-adsense-readiness.md) — 识别多语言模板薄页为主要审核风险，并给出收缩索引、增加独特内容与补齐 CMP 的提交前方案。
 - [2026-06-16 生成《山海经》入门文案 5 秒分镜首批图片](./sessions/2026-06-16-shanhaijing-intro-5s-storyboard.md) — 按约 5 秒一张图建立可续跑分镜记录，并生成开头 60 秒的 12 张图片。
 - [2026-06-16 生成《山海经》怪物分镜与 Vidu 转场词](./sessions/2026-06-16-shanhaijing-monster-storyboard-vidu.md) — 基于九尾狐、烛龙、相柳口播文案生成 6 帧一致尺寸分镜图，并整理相邻帧转场提示词。
 - [2026-06-15 生成《山海经》地理考察分镜视频](./sessions/2026-06-15-shanhaijing-geography-storyboard-video.md) — 基于四张古籍分镜使用 Agnes 生成 15 秒视频，并记录输出路径与校验结果。
@@ -36,6 +37,8 @@
 
 ## References
 
+- [Google AdSense eligibility and program policies](./references/google-adsense-eligibility-and-policies.md) — Google 对原创、高质量、合规内容与站点所有权的官方资格要求。
+- [Google Search scaled content policy](./references/google-search-scaled-content-policy.md) — Google 对规模化低价值页面的官方定义及本项目的风险映射。
 - [opencli-weixin-album](./references/opencli-weixin-album.md) — OpenCLI 微信公众号合集文章下载插件。
 - [OpenCLI](./references/opencli.md) — 命令行工具与 Browser Bridge 插件运行时。
 
