@@ -17,14 +17,16 @@
 - Git 的 system/global/local/worktree 配置均未设置 HTTP/HTTPS 代理，相关代理环境变量也不存在，因此 Git 默认不沿用浏览器的系统代理。
 - 强制直连 GitHub 时请求长时间卡住并超时；通过 `127.0.0.1:7890` 请求 GitHub 页面约 0.6 秒完成。
 - `git ls-remote` 强制通过 Clash 代理时 1.8 秒成功返回；强制直连的重复测试持续到诊断命令超时。
+- 按用户确认，将 Git 全局 `http.proxy` 和 `https.proxy` 均配置为 `http://127.0.0.1:7890`。
+- 配置后再次运行 `git ls-remote https://github.com/git/git.git HEAD`，1.24 秒成功返回，退出码为 0。
 
 ## 结论
 
-故障不是 GitHub 443 整体不可达，也不是 DNS、hosts、证书或 Clash 未运行。根因是浏览器与 Git 使用了不同网络链路：浏览器使用 Clash 系统代理，而 Git 未配置代理并尝试不稳定的 GitHub 直连，因而出现连接 443 超时。当前未修改系统或 Git 配置。
+故障不是 GitHub 443 整体不可达，也不是 DNS、hosts、证书或 Clash 未运行。根因是浏览器与 Git 使用了不同网络链路：浏览器使用 Clash 系统代理，而 Git 未配置代理并尝试不稳定的 GitHub 直连，因而出现连接 443 超时。现已为 Git 配置 Clash 全局代理并验证成功。
 
 ## 待办
 
-- [ ] 如需修复，为 Git 配置 `http://127.0.0.1:7890` 代理，并在 Clash 关闭时同步取消该配置。
+- [ ] Clash 关闭或代理端口变化时，同步调整或取消 Git 全局代理配置。
 
 ## 产出
 
