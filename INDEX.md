@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-18 将 PowerShell 和 CMD 默认编码设为 UTF-8](./sessions/2026-06-18-set-powershell-cmd-utf8-default.md) — 修正 OneDrive 重定向导致的 PowerShell profile 路径错位，并让 CMD 默认进入代码页 65001。
 - [2026-06-18 续跑《山海经》入门文案 5 秒分镜](./sessions/2026-06-18-resume-shanhaijing-intro-storyboard.md) — 补写 scene-025 到 scene-041 的实际完成状态，并确认下一断点为 scene-042。
 - [2026-06-18 提升 Elf Name Generator 的 AdSense 审核准备度](./sessions/2026-06-18-improve-elf-name-generator-adsense-readiness.md) — 收缩索引到 15 个高价值 URL，补充核心页原创内容、命名指南、编辑透明度与 CMP 操作说明。
 - [2026-06-18 审查 Elf Name Generator 的 AdSense 通过率](./sessions/2026-06-18-audit-elf-name-generator-adsense-readiness.md) — 识别多语言模板薄页为主要审核风险，并给出收缩索引、增加独特内容与补齐 CMP 的提交前方案。
