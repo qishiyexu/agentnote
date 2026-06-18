@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-18 提升 Elf Name Generator 的 AdSense 审核准备度](./sessions/2026-06-18-improve-elf-name-generator-adsense-readiness.md) — 收缩索引到 15 个高价值 URL，补充核心页原创内容、命名指南、编辑透明度与 CMP 操作说明。
 - [2026-06-18 审查 Elf Name Generator 的 AdSense 通过率](./sessions/2026-06-18-audit-elf-name-generator-adsense-readiness.md) — 识别多语言模板薄页为主要审核风险，并给出收缩索引、增加独特内容与补齐 CMP 的提交前方案。
 - [2026-06-16 生成《山海经》入门文案 5 秒分镜首批图片](./sessions/2026-06-16-shanhaijing-intro-5s-storyboard.md) — 按约 5 秒一张图建立可续跑分镜记录，并生成开头 60 秒的 12 张图片。
 - [2026-06-16 生成《山海经》怪物分镜与 Vidu 转场词](./sessions/2026-06-16-shanhaijing-monster-storyboard-vidu.md) — 基于九尾狐、烛龙、相柳口播文案生成 6 帧一致尺寸分镜图，并整理相邻帧转场提示词。
