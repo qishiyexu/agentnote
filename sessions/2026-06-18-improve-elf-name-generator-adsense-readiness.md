@@ -22,6 +22,12 @@
 - 非核心页和翻译页输出 `noindex, follow`；翻译页 canonical 指向英文对应页。
 - 本地预览唯一 404 是 `/_vercel/insights/script.js`，属于脱离 Vercel 环境时的 Analytics 代理缺失，不是站内资源遗漏。
 
+## Vercel Node 与 lockfile 修正
+
+- 将 `package.json` 的 Node 引擎从 `>=22 <24` 改为 `24.x`，与 Vercel Project Settings 的 24.x 对齐，避免部署时覆盖设置并回退到 Node 22。
+- 使用 npm 11 将 `package-lock.json` 从 lockfile v1 升级为 v3，消除 Vercel 安装阶段的 `npm warn old lockfile`。
+- 重新执行 npm 11 的 clean install、lint 和 production build，均通过；生产依赖 `npm audit --omit=dev` 为 0 个漏洞。
+
 ## 仍需账号侧操作
 
 代码不能代替 AdSense 后台操作。正式送审前，需要在 AdSense 的 Privacy & messaging 中发布适用于 EEA、英国和瑞士用户的 Google 认证 CMP 消息，并确认站点所有权、广告代码和政策中心没有待处理问题。
