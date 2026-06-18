@@ -39,6 +39,7 @@
 ## References
 
 - [Google AdSense eligibility and program policies](./references/google-adsense-eligibility-and-policies.md) — Google 对原创、高质量、合规内容与站点所有权的官方资格要求。
+- [Google Search Console sitemap and indexing](./references/google-search-console-sitemap-and-indexing.md) — Google 官方 sitemap 提交、canonical URL 与实际收录检查说明。
 - [Google Search scaled content policy](./references/google-search-scaled-content-policy.md) — Google 对规模化低价值页面的官方定义及本项目的风险映射。
 - [opencli-weixin-album](./references/opencli-weixin-album.md) — OpenCLI 微信公众号合集文章下载插件。
 - [OpenCLI](./references/opencli.md) — 命令行工具与 Browser Bridge 插件运行时。

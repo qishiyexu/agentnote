@@ -35,3 +35,16 @@
 ## 结论
 
 站点已从大量近似模板页调整为少量重点索引页加原创指南的结构，技术和内容层面的审核准备度明显提高。是否通过仍由 Google 的实际审核、站点流量与账号状态决定，不能保证通过。
+
+## 第二轮内容扩充与索引准备
+
+- 12 个英文生成器页全部改为可索引页，每页加入约 600–800 词的独立说明与 4 个实用 FAQ；各页分别处理自己的命名问题，而不是替换关键词。
+- KOTLC 页明确标注为 unofficial、fan-inspired 且与原作品无关联；Dark Elf 页覆盖地下城社区、刺客别名、女祭司职务和反派命名。
+- Guide 库从 3 篇扩展到 12 篇，新增 DND 选名、100 个名字与含义、男女命名差异、暗黑精灵、精灵语言、发音、中性名、职业名和趣味名指南；每篇均有 FAQ 与 FAQPage 结构化数据。
+- Privacy Policy 按 Google Required content 补入广告 cookie、个性化广告依据和 Ads Settings 退出入口三项披露。
+- sitemap 构建结果包含 12 个英文生成器页和 12 篇指南；robots.txt 已引用 sitemap。新增 Search Console HTML tag token 环境变量及提交、URL Inspection、Page indexing 检查步骤。
+- `npm run lint` 与 `npm run build` 通过，Next.js 生成 125 个静态页面。
+
+部署后仍需在 Search Console 提交 sitemap，并逐项确认首页、文章索引和 12 个英文生成器页已收录。Sitemap 只是发现提示，不能证明已经收录。
+
+新增引用：[Google Search Console sitemap and indexing](../references/google-search-console-sitemap-and-indexing.md)。
