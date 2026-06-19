@@ -9,7 +9,7 @@
 
 ## Sessions（按时间倒序）
 
-- [2026-06-19 继续生成《山海经》5 秒分镜](./sessions/2026-06-19-continue-shanhaijing-storyboard.md) — 完成 scene-053 到 scene-054，并记录 scene-055 按一分钟间隔重试仍受图像服务网络错误阻塞。
+- [2026-06-19 继续生成《山海经》5 秒分镜](./sessions/2026-06-19-continue-shanhaijing-storyboard.md) — 已完成 scene-053 到 scene-058；当前 scene-059 因图像服务网络错误暂时阻塞。
 - [2026-06-18 诊断 GitHub 443 连接失败](./sessions/2026-06-18-diagnose-github-443-connectivity.md) — 确认浏览器经 Clash 正常，而未配置代理的 Git 直连 GitHub 会卡住并超时。
 - [2026-06-18 将 PowerShell 和 CMD 默认编码设为 UTF-8](./sessions/2026-06-18-set-powershell-cmd-utf8-default.md) — 修正 OneDrive 重定向导致的 PowerShell profile 路径错位，并让 CMD 默认进入代码页 65001。
 - [2026-06-18 续跑《山海经》入门文案 5 秒分镜](./sessions/2026-06-18-resume-shanhaijing-intro-storyboard.md) — 补写 scene-025 到 scene-041 的实际完成状态，并确认下一断点为 scene-042。
