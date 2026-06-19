@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-19 将 Name Dungeon 集成进 Elf Name Generator](./sessions/2026-06-19-integrate-name-dungeon.md) — 在每个生成结果旁增加带名字参数的游戏入口，并完成多语言、响应式与构建验证。
 - [2026-06-19 继续生成《山海经》5 秒分镜](./sessions/2026-06-19-continue-shanhaijing-storyboard.md) — 已完成 scene-053 到 scene-058；当前 scene-059 因图像服务网络错误暂时阻塞。
 - [2026-06-18 诊断 GitHub 443 连接失败](./sessions/2026-06-18-diagnose-github-443-connectivity.md) — 确认浏览器经 Clash 正常，而未配置代理的 Git 直连 GitHub 会卡住并超时。
 - [2026-06-18 将 PowerShell 和 CMD 默认编码设为 UTF-8](./sessions/2026-06-18-set-powershell-cmd-utf8-default.md) — 修正 OneDrive 重定向导致的 PowerShell profile 路径错位，并让 CMD 默认进入代码页 65001。
@@ -42,6 +43,7 @@
 
 ## References
 
+- [Name Dungeon](./references/name-dungeon.md) — 支持通过 `?name=` 参数接收精灵名字的网页游戏。
 - [Google AdSense eligibility and program policies](./references/google-adsense-eligibility-and-policies.md) — Google 对原创、高质量、合规内容与站点所有权的官方资格要求。
 - [Google Search Console sitemap and indexing](./references/google-search-console-sitemap-and-indexing.md) — Google 官方 sitemap 提交、canonical URL 与实际收录检查说明。
 - [Google Search scaled content policy](./references/google-search-scaled-content-policy.md) — Google 对规模化低价值页面的官方定义及本项目的风险映射。
