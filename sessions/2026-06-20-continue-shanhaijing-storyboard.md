@@ -11,14 +11,17 @@
 - 每张完成后均立即同步更新 `storyboard.jsonl` 和生产日志。
 - `scene-065` 连续调用 3 次均遇到图像服务网络错误，每次重试前等待 1 分钟，未产生文件。
 - 用户要求继续后，再对 `scene-065` 连续调用 3 次；每次重试前等待 1 分钟，仍全部遇到相同网络错误。今日累计 6 次失败。
+- 本次续跑从 `scene-065` 开始：前两次调用仍遇到网络错误，各等待 1 分钟后，第三次成功生成。
+- 随后连续完成 `scene-066`、`scene-067`；`scene-068` 首次遇到网络错误，等待 1 分钟后重试成功。
+- `scene-065.png` 到 `scene-068.png` 均已保存为 1672×941，并在每张完成后立即同步更新 `storyboard.jsonl` 与生产日志。
 
 ## 结论
 
-当前可信断点为 `scene-065`：`scene-001` 到 `scene-064` 已完成，共 64 张；`scene-065` 到 `scene-096` 待生成，共 32 张。续跑记录、生产日志与磁盘文件一致。
+当前可信断点为 `scene-069`：`scene-001` 到 `scene-068` 已完成，共 68 张；`scene-069` 到 `scene-096` 待生成，共 28 张。续跑记录、生产日志与磁盘文件一致。
 
 ## 待办
 
-- [ ] 图像服务恢复后，从 `scene-065` 继续生成。
+- [ ] 从 `scene-069` 继续生成。
 - [ ] 每张成功后立即同步更新续跑记录和生产日志。
 
 ## 产出
@@ -27,6 +30,10 @@
 - 修改：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\production-log.md`
 - 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-063.png`
 - 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-064.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-065.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-066.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-067.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-068.png`
 
 ## 引用
 
