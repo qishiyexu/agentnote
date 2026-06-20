@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-21 安装并启用 Ponytail 插件](./sessions/2026-06-21-install-enable-ponytail.md) — 安装 Ponytail 4.7.0，启用并信任两个会话钩子，修正 Codex 0.130.0 下的 Windows 命令兼容问题并完成端到端验证。
 - [2026-06-21 生成 Windows x64 clink.node](./sessions/2026-06-21-build-clink-node.md) — 确认 deploy.sh 是自动编译入口，并记录 Git Bash 命令、x64 Release 输出路径及 x86 参数。
 - [2026-06-21 分析 Rust 集成 libclink 静态库](./sessions/2026-06-21-analyze-rust-libclink-integration.md) — 确认当前三件套为 VS2015 Debug 静态产物，梳理异步 C ABI、完整依赖与运行时闭包，并给出 Sidecar、bridge DLL 和静态直连的选型结论。
 - [2026-06-20 配置仅对 Codex 生效的本地代理](./sessions/2026-06-20-configure-codex-only-proxy.md) — 为 CLI 和桌面版建立进程级 Clash 代理启动器，不修改 Windows 用户或系统代理。
@@ -48,6 +49,7 @@
 
 ## References
 
+- [Ponytail](./references/ponytail.md) — 为 Codex 提供持续任务推进、会话钩子和配套技能的插件。
 - [Name Dungeon](./references/name-dungeon.md) — 支持通过 `?name=` 参数接收精灵名字的网页游戏。
 - [Google AdSense eligibility and program policies](./references/google-adsense-eligibility-and-policies.md) — Google 对原创、高质量、合规内容与站点所有权的官方资格要求。
 - [Google Search Console sitemap and indexing](./references/google-search-console-sitemap-and-indexing.md) — Google 官方 sitemap 提交、canonical URL 与实际收录检查说明。
