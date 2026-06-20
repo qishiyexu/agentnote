@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-21 生成 Windows x64 clink.node](./sessions/2026-06-21-build-clink-node.md) — 确认 deploy.sh 是自动编译入口，并记录 Git Bash 命令、x64 Release 输出路径及 x86 参数。
 - [2026-06-21 分析 Rust 集成 libclink 静态库](./sessions/2026-06-21-analyze-rust-libclink-integration.md) — 确认当前三件套为 VS2015 Debug 静态产物，梳理异步 C ABI、完整依赖与运行时闭包，并给出 Sidecar、bridge DLL 和静态直连的选型结论。
 - [2026-06-20 配置仅对 Codex 生效的本地代理](./sessions/2026-06-20-configure-codex-only-proxy.md) — 为 CLI 和桌面版建立进程级 Clash 代理启动器，不修改 Windows 用户或系统代理。
 - [2026-06-20 添加《山海经》分镜可续跑脚本](./sessions/2026-06-20-add-resumable-shanhaijing-storyboard-runner.md) — 自动发现 JSONL 断点、退避重试、原子回写图片状态并同步生产日志。
