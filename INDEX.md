@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-06-19
+最后更新：2026-06-21
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-06-21 分析 Rust 集成 libclink 静态库](./sessions/2026-06-21-analyze-rust-libclink-integration.md) — 确认当前三件套为 VS2015 Debug 静态产物，梳理异步 C ABI、完整依赖与运行时闭包，并给出 Sidecar、bridge DLL 和静态直连的选型结论。
 - [2026-06-20 配置仅对 Codex 生效的本地代理](./sessions/2026-06-20-configure-codex-only-proxy.md) — 为 CLI 和桌面版建立进程级 Clash 代理启动器，不修改 Windows 用户或系统代理。
 - [2026-06-20 添加《山海经》分镜可续跑脚本](./sessions/2026-06-20-add-resumable-shanhaijing-storyboard-runner.md) — 自动发现 JSONL 断点、退避重试、原子回写图片状态并同步生产日志。
 - [2026-06-20 继续生成《山海经》5 秒分镜](./sessions/2026-06-20-continue-shanhaijing-storyboard.md) — 全片 scene-001 到 scene-096 已全部完成，并通过状态、路径与尺寸一致性核验。
