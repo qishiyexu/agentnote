@@ -14,14 +14,16 @@
 - 本次续跑从 `scene-065` 开始：前两次调用仍遇到网络错误，各等待 1 分钟后，第三次成功生成。
 - 随后连续完成 `scene-066`、`scene-067`；`scene-068` 首次遇到网络错误，等待 1 分钟后重试成功。
 - `scene-065.png` 到 `scene-068.png` 均已保存为 1672×941，并在每张完成后立即同步更新 `storyboard.jsonl` 与生产日志。
+- 再次续跑完成 `scene-069.png` 到 `scene-075.png`，7 张均为 1672×941，并逐张完成视觉检查、状态回写和生产日志同步。
+- `scene-069` 首次调用返回 500，`scene-074` 首次调用遇到网络错误；两者均等待 1 分钟后重试成功，其余图片首次生成成功。
 
 ## 结论
 
-当前可信断点为 `scene-069`：`scene-001` 到 `scene-068` 已完成，共 68 张；`scene-069` 到 `scene-096` 待生成，共 28 张。续跑记录、生产日志与磁盘文件一致。
+当前可信断点为 `scene-076`：`scene-001` 到 `scene-075` 已完成，共 75 张；`scene-076` 到 `scene-096` 待生成，共 21 张。续跑记录、生产日志与磁盘文件一致。
 
 ## 待办
 
-- [ ] 从 `scene-069` 继续生成。
+- [ ] 从 `scene-076` 继续生成。
 - [ ] 每张成功后立即同步更新续跑记录和生产日志。
 
 ## 产出
@@ -34,6 +36,13 @@
 - 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-066.png`
 - 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-067.png`
 - 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-068.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-069.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-070.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-071.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-072.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-073.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-074.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-075.png`
 
 ## 引用
 
