@@ -10,7 +10,7 @@
 ## Sessions（按时间倒序）
 
 - [2026-06-20 添加《山海经》分镜可续跑脚本](./sessions/2026-06-20-add-resumable-shanhaijing-storyboard-runner.md) — 自动发现 JSONL 断点、退避重试、原子回写图片状态并同步生产日志。
-- [2026-06-20 继续生成《山海经》5 秒分镜](./sessions/2026-06-20-continue-shanhaijing-storyboard.md) — 已完成 scene-063 到 scene-078；当前可信断点为 scene-079。
+- [2026-06-20 继续生成《山海经》5 秒分镜](./sessions/2026-06-20-continue-shanhaijing-storyboard.md) — 已完成 scene-063 到 scene-080；当前可信断点为 scene-081。
 - [2026-06-19 将 Name Dungeon 集成进 Elf Name Generator](./sessions/2026-06-19-integrate-name-dungeon.md) — 在每个生成结果旁增加带名字参数的游戏入口，并完成多语言、响应式与构建验证。
 - [2026-06-19 继续生成《山海经》5 秒分镜](./sessions/2026-06-19-continue-shanhaijing-storyboard.md) — 已完成 scene-053 到 scene-058；当前 scene-059 因图像服务网络错误暂时阻塞。
 - [2026-06-18 诊断 GitHub 443 连接失败](./sessions/2026-06-18-diagnose-github-443-connectivity.md) — 确认浏览器经 Clash 正常，而未配置代理的 Git 直连 GitHub 会卡住并超时。
