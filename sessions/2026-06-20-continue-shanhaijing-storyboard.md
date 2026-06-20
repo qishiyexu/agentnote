@@ -19,15 +19,17 @@
 - 本轮继续完成 `scene-076.png` 到 `scene-078.png`，3 张均为 1672×941，并逐张完成视觉检查、状态回写和生产日志同步。
 - 本轮继续完成 `scene-079.png`、`scene-080.png`，两张均为 1672×941，并逐张完成视觉检查、状态回写和生产日志同步。
 - `scene-081` 连续两次调用均遇到图像服务网络错误，间隔等待 1 分钟后仍未成功，状态保持 `todo`。
+- 后续续跑已完成 `scene-081.png` 到 `scene-096.png`；其中最后一轮完成 `scene-090.png` 到 `scene-096.png`，每张生成后均立即更新 `storyboard.jsonl` 与生产日志。
+- 最终核验 96 条记录全部为 `done`，96 个 PNG 文件均存在且尺寸统一为 1672×941，未发现状态、路径、格式或尺寸问题。
 
 ## 结论
 
-当前可信断点为 `scene-081`：`scene-001` 到 `scene-080` 已完成，共 80 张；`scene-081` 到 `scene-096` 待生成，共 16 张。续跑记录、生产日志与磁盘文件一致。
+全片 96 张、约 8 分钟的 5 秒分镜已全部完成。续跑记录、生产日志与磁盘文件一致，不再有待生成条目。
 
 ## 待办
 
-- [ ] 从 `scene-081` 继续生成。
-- [ ] 每张成功后立即同步更新续跑记录和生产日志。
+- [x] 完成 `scene-081` 到 `scene-096`。
+- [x] 每张成功后立即同步更新续跑记录和生产日志。
 
 ## 产出
 
@@ -51,6 +53,7 @@
 - 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-078.png`
 - 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-079.png`
 - 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-080.png`
+- 新增：`D:\Don\Projects\山海经\outputs\shanhaijing-intro-5s\images\scene-081.png` 到 `scene-096.png`
 
 ## 引用
 
