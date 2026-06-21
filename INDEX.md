@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-06-21
+最后更新：2026-06-22
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-06-22 安装 CapCut Mate](./sessions/2026-06-22-install-capcut-mate.md) — 在 Windows 本地完成 Python 与专用依赖安装，并通过 OpenAPI 请求验证服务可运行。
 - [2026-06-21 搭建 ThorTerminal 基础 UI 框架](./sessions/2026-06-21-build-thor-terminal-ui-foundation.md) — 接入路由、共享布局、Tailwind/Shadcn、深浅主题和中英双语，并完成桌面交互验证。
 - [2026-06-21 配置 ThorTerminal Sidecar IPC](./sessions/2026-06-21-configure-thor-terminal-sidecar-ipc.md) — 使用 Node SEA 与 Tauri Shell 打通 React、Rust、Sidecar 的完整 ping 链路，并在真实桌面窗口验证 pong。
 - [2026-06-21 初始化 ThorTerminal Node.js Sidecar](./sessions/2026-06-21-initialize-thor-terminal-sidecar.md) — 建立 Node.js 20+ + TypeScript Sidecar workspace，并验证编译产物启动及 stdout 协议边界。
@@ -55,6 +56,7 @@
 
 ## References
 
+- [CapCut Mate](./references/capcut-mate.md) — 基于 FastAPI 的剪映草稿自动化 API 及其 Windows 本地安装方式。
 - [Ponytail](./references/ponytail.md) — 为 Codex 提供持续任务推进、会话钩子和配套技能的插件。
 - [Name Dungeon](./references/name-dungeon.md) — 支持通过 `?name=` 参数接收精灵名字的网页游戏。
 - [Google AdSense eligibility and program policies](./references/google-adsense-eligibility-and-policies.md) — Google 对原创、高质量、合规内容与站点所有权的官方资格要求。
