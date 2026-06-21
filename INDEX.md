@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-21 补齐 clink Sidecar 自包含运行时](./sessions/2026-06-21-package-clink-sidecar-runtime.md) — 复制 Windows x64 第三方 DLL、GStreamer plugins、FFmpeg 和 VC++ runtime，并通过隔离路径的插件与 Node callback 验证。
 - [2026-06-21 安装并启用 Ponytail 插件](./sessions/2026-06-21-install-enable-ponytail.md) — 安装 Ponytail 4.7.0，启用并信任两个会话钩子，修正 Codex 0.130.0 下的 Windows 命令兼容问题并完成端到端验证。
 - [2026-06-21 生成 Windows x64 clink.node](./sessions/2026-06-21-build-clink-node.md) — 确认 deploy.sh 是自动编译入口，并记录 Git Bash 命令、x64 Release 输出路径及 x86 参数。
 - [2026-06-21 分析 Rust 使用 clink.node](./sessions/2026-06-21-analyze-rust-clink-node-integration.md) — 实测 Node 加载和异步 callback，梳理导出 API、运行时闭包与 Buffer 边界，确认 Rust 应通过 JSON-RPC Sidecar 使用该模块。

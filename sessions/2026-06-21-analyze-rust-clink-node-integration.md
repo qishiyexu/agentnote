@@ -28,7 +28,7 @@
 
 ## 待办
 
-- [ ] 把第三方 DLL、GStreamer plugins 和 VC++ runtime 整理为 Sidecar 自包含目录。
+- [x] 把第三方 DLL、GStreamer plugins 和 VC++ runtime 整理为 Sidecar 自包含目录（见 [后续 session](./2026-06-21-package-clink-sidecar-runtime.md)）。
 - [ ] 用项目最终随包 Node 20+ 的精确版本重复加载与 callback 测试。
 - [ ] 实现最小 Sidecar JSON-RPC 适配层，验证真实 `run → context → 连接状态 → stop`。
 - [ ] 在干净 Windows 机器验证安装包、重复连接、异常退出和多 session。
