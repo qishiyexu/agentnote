@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-21 搭建 ThorTerminal 基础 UI 框架](./sessions/2026-06-21-build-thor-terminal-ui-foundation.md) — 接入路由、共享布局、Tailwind/Shadcn、深浅主题和中英双语，并完成桌面交互验证。
 - [2026-06-21 配置 ThorTerminal Sidecar IPC](./sessions/2026-06-21-configure-thor-terminal-sidecar-ipc.md) — 使用 Node SEA 与 Tauri Shell 打通 React、Rust、Sidecar 的完整 ping 链路，并在真实桌面窗口验证 pong。
 - [2026-06-21 初始化 ThorTerminal Node.js Sidecar](./sessions/2026-06-21-initialize-thor-terminal-sidecar.md) — 建立 Node.js 20+ + TypeScript Sidecar workspace，并验证编译产物启动及 stdout 协议边界。
 - [2026-06-21 初始化 ThorTerminal Tauri 项目](./sessions/2026-06-21-initialize-thor-terminal-tauri.md) — 完成 Tauri 2 + React + TypeScript 最小项目、工具链升级和桌面 debug 构建验证。
