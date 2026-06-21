@@ -11,7 +11,7 @@
 
 - [2026-06-21 安装并启用 Ponytail 插件](./sessions/2026-06-21-install-enable-ponytail.md) — 安装 Ponytail 4.7.0，启用并信任两个会话钩子，修正 Codex 0.130.0 下的 Windows 命令兼容问题并完成端到端验证。
 - [2026-06-21 生成 Windows x64 clink.node](./sessions/2026-06-21-build-clink-node.md) — 确认 deploy.sh 是自动编译入口，并记录 Git Bash 命令、x64 Release 输出路径及 x86 参数。
-- [2026-06-21 分析 Rust 集成 libclink 静态库](./sessions/2026-06-21-analyze-rust-libclink-integration.md) — 确认当前三件套为 VS2015 Debug 静态产物，梳理异步 C ABI、完整依赖与运行时闭包，并给出 Sidecar、bridge DLL 和静态直连的选型结论。
+- [2026-06-21 分析 Rust 使用 clink.node](./sessions/2026-06-21-analyze-rust-clink-node-integration.md) — 实测 Node 加载和异步 callback，梳理导出 API、运行时闭包与 Buffer 边界，确认 Rust 应通过 JSON-RPC Sidecar 使用该模块。
 - [2026-06-20 配置仅对 Codex 生效的本地代理](./sessions/2026-06-20-configure-codex-only-proxy.md) — 为 CLI 和桌面版建立进程级 Clash 代理启动器，不修改 Windows 用户或系统代理。
 - [2026-06-20 添加《山海经》分镜可续跑脚本](./sessions/2026-06-20-add-resumable-shanhaijing-storyboard-runner.md) — 自动发现 JSONL 断点、退避重试、原子回写图片状态并同步生产日志。
 - [2026-06-20 继续生成《山海经》5 秒分镜](./sessions/2026-06-20-continue-shanhaijing-storyboard.md) — 全片 scene-001 到 scene-096 已全部完成，并通过状态、路径与尺寸一致性核验。
