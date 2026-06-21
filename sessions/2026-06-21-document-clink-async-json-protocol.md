@@ -17,6 +17,7 @@
 3. 从当前源码静态提取完整的输入命令与输出事件名称清单。
 4. 明确原生入口的兼容性边界：非法 JSON、未知类型和缺 context 可能静默无回调；未知命令可能返回空成功；连接成功必须以事件而不是 `run` response 判断。
 5. 将新文档接入 ThorTerminal README、Rust 集成分析、状态和变更日志。
+6. 按用户反馈将 123 个输入命令从名称清单扩展为“调用方向、`arg` 参数、实际 C API/处理动作”映射表，并标注 Android、Windows、macOS 的编译条件。
 
 ## 结论
 
@@ -30,7 +31,7 @@
 
 - [ ] 按协议文档实现最小 Sidecar adapter 和 pending/context 映射。
 - [ ] 用真实但可控的连接配置验证 `run → connect-state → stop`。
-- [ ] 根据 ThorTerminal 实际功能逐步补充所用命令的精确 `arg` schema，不提前封装全部 clink 能力。
+- [ ] 根据 ThorTerminal 实际使用范围，为被公开的命令补充字段类型、取值约束和返回 schema；不提前封装未使用能力。
 
 ## 产出
 
