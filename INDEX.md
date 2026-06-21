@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-22 用剪映合成《山海经》完整视频并添加字幕](./sessions/2026-06-22-compose-shanhaijing-video-with-captions.md) — 将 95 段相邻分镜视频顺序拼接为 7 分 55 秒成片，加入 95 条同步字幕并由剪映导出核验。
 - [2026-06-22 安装 CapCut Mate](./sessions/2026-06-22-install-capcut-mate.md) — 在 Windows 本地完成 Python 与专用依赖安装，并通过 OpenAPI 请求验证服务可运行。
 - [2026-06-21 搭建 ThorTerminal 基础 UI 框架](./sessions/2026-06-21-build-thor-terminal-ui-foundation.md) — 接入路由、共享布局、Tailwind/Shadcn、深浅主题和中英双语，并完成桌面交互验证。
 - [2026-06-21 配置 ThorTerminal Sidecar IPC](./sessions/2026-06-21-configure-thor-terminal-sidecar-ipc.md) — 使用 Node SEA 与 Tauri Shell 打通 React、Rust、Sidecar 的完整 ping 链路，并在真实桌面窗口验证 pong。
