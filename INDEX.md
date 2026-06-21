@@ -9,7 +9,7 @@
 
 ## Sessions（按时间倒序）
 
-- [2026-06-21 整理 clink 内部异步 JSON 协议](./sessions/2026-06-21-document-clink-async-json-protocol.md) — 基于原生源码整理消息包络、回调时序、context 生命周期，并逐条映射命令方向、参数与 C API。
+- [2026-06-21 整理 clink 内部异步 JSON 协议](./sessions/2026-06-21-document-clink-async-json-protocol.md) — 基于原生源码整理消息包络、回调时序、context 生命周期，并逐条映射双向命令/事件、参数与原生 API。
 - [2026-06-21 补齐 clink Sidecar 自包含运行时](./sessions/2026-06-21-package-clink-sidecar-runtime.md) — 复制 Windows x64 第三方 DLL、GStreamer plugins、FFmpeg 和 VC++ runtime，并通过隔离路径的插件与 Node callback 验证。
 - [2026-06-21 安装并启用 Ponytail 插件](./sessions/2026-06-21-install-enable-ponytail.md) — 安装 Ponytail 4.7.0，启用并信任两个会话钩子，修正 Codex 0.130.0 下的 Windows 命令兼容问题并完成端到端验证。
 - [2026-06-21 生成 Windows x64 clink.node](./sessions/2026-06-21-build-clink-node.md) — 确认 deploy.sh 是自动编译入口，并记录 Git Bash 命令、x64 Release 输出路径及 x86 参数。
