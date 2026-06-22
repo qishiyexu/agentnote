@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-22 持久化 ThorTerminal 登录态](./sessions/2026-06-22-persist-thor-terminal-login.md) — 登录结果跨应用重启保留，主动退出时清除，且不写入 Git 工作区。
 - [2026-06-22 渲染 ThorTerminal clink 返回画面](./sessions/2026-06-22-render-thor-terminal-clink-frames.md) — 接入 clink 图像帧，并修复连接窗口创建时序、早到首帧丢失、表单请求体及下发接口路径。
 - [2026-06-22 实现 ThorTerminal 桌面连接多窗口流程](./sessions/2026-06-22-implement-thor-terminal-desktop-multiwindow-flow.md) — 完成桌面会话独立窗口、重复连接聚焦、主动断开关窗、用户关窗自动断开及状态事件同步。
 - [2026-06-22 实现 ThorTerminal JSON-RPC 通信协议](./sessions/2026-06-22-implement-thor-terminal-json-rpc.md) — 完成逐行 JSON-RPC 2.0、标准错误、通知语义及 Node/Rust 双端协议测试。
