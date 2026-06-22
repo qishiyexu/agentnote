@@ -83,3 +83,10 @@
 - 修复 `sidecar-app/scripts/build-sea.mjs`：SEA 注入完成后，将 `sidecar-app/lib/<platform-arch>` 递归复制到 `src-tauri/binaries/lib/<platform-arch>`，保持与 `src/clink.ts` 的现有加载逻辑一致。
 - 复验通过：`src-tauri\binaries\lib\win32-x64\clink.node` 存在；`--clink-smoke` 返回 `{"ok":true,...}` 并收到 clink callback；`pnpm --filter @thor-terminal/sidecar test` 4/4 通过；`pnpm tauri build --debug --no-bundle` 通过并再次复制 runtime。
 - 已重启 debug 程序 `D:\Don\Projects\thor_terminal\src-tauri\target\debug\thor-terminal.exe`，后续点击“连接”会使用修复后的 sidecar。
+
+## 客户端鼠标模式修复
+
+- clink 底层默认请求 `CLINK_MOUSE_MODE_CLIENT`，因此不重复下发模式切换命令。
+- 移除云桌面 Canvas 的 `cursor-none`，让客户端系统鼠标在窗口内保持可见。
+- 拦截 Canvas 的 `contextmenu` 默认行为；现有右键按下/抬起仍通过 `mouse-input` 发送到云桌面。
+- `pnpm build` 与 `git diff --check` 通过。
