@@ -110,3 +110,12 @@
 - 用户随后决定移除 `Win`、`Ctrl+Alt+Del` 远端按钮，改为设置页的“启用系统快捷键”复选框。
 - 该设置默认关闭并写入本机 `localStorage`；勾选后仅在已连接的云桌面窗口聚焦时启用 clink `key-hook`，失焦、取消勾选或窗口卸载时立即关闭。启用钩子期间不再重复发送 Canvas DOM 键盘事件。
 - 验证通过：键盘钩子焦点生命周期测试、Qt 键值测试、前端构建和 Tauri debug 构建；ThorTerminal 提交 `f7f6c79`。
+
+## clink key-hook 导致普通快捷键失效的诊断
+
+- 用户复测发现勾选“启用系统快捷键”后，`Ctrl+N` 不再到达远端。
+- ThorTerminal 在设置勾选时会立即停止 Canvas 的 DOM `key-input` 转发，只保留 `key-hook` 路径；Sidecar 日志也显示 `key-hook enabled=1` 得到 clink 应答后，没有对应的 `Ctrl` / `N` `key-input`。
+- 当前打包的 `clink.node` 只包含非 QML 分支特征字符串 `delay set hook work`。该分支在 `clink_platform_key_hook` 中延迟 500ms 投递 `WM_CLINK_SET_KEY_HOOK`，但 `clink-platform-win32.c` 的 `WM_CLINK_SET_KEY_HOOK` / `WM_CLINK_UNSET_KEY_HOOK` 消息处理已被整段注释，因此低级键盘钩子实际没有安装。
+- 这与官方 QML 客户端不同：QML 通过 `ArkExtends.system.startHookKeyboardInput()` 获得真实的 `keyHookOn` 结果，并且只在实际 hook 已启动时跳过 `Keys.onPressed/onReleased`。
+- 根因是 ThorTerminal 把“用户希望启用 hook”的设置值误当成“hook 已成功启用”的运行状态，造成 DOM 转发已停、原生 hook 又未启动的输入空档；不是 `Ctrl+N` 的 Qt 键值映射问题。
+- 后续修复应让 clink 的非 QML 分支真正安装/卸载 hook，并让 ThorTerminal 根据可确认的 hook 成功状态切换输入路径；不能仅凭复选框状态关闭 DOM 转发。
