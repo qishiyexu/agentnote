@@ -119,3 +119,11 @@
 - 这与官方 QML 客户端不同：QML 通过 `ArkExtends.system.startHookKeyboardInput()` 获得真实的 `keyHookOn` 结果，并且只在实际 hook 已启动时跳过 `Keys.onPressed/onReleased`。
 - 根因是 ThorTerminal 把“用户希望启用 hook”的设置值误当成“hook 已成功启用”的运行状态，造成 DOM 转发已停、原生 hook 又未启动的输入空档；不是 `Ctrl+N` 的 Qt 键值映射问题。
 - 后续修复应让 clink 的非 QML 分支真正安装/卸载 hook，并让 ThorTerminal 根据可确认的 hook 成功状态切换输入路径；不能仅凭复选框状态关闭 DOM 转发。
+
+## 不修改 clink 的普通快捷键兼容修复
+
+- 按用户要求不修改 clink 源码；ThorTerminal 不再因为“启用系统快捷键”设置已勾选而停止 Canvas DOM 键盘转发。
+- `key-hook` 的设置、聚焦启停与下发逻辑保持不变；普通键和 `Ctrl+N` 始终继续走现有 Qt 键值 `key-input` 路径，避免当前 clink hook 未实际安装时出现输入空档。
+- 增加回归检查，防止重新引入按设置值直接跳过 DOM 键盘事件的条件。
+- 验证通过：`pnpm test` 3/3、`pnpm build`、`git diff --check`、`pnpm tauri build --debug --no-bundle`。
+- 此兼容修复不让 WebView 获得 Windows 截获的 Win、Alt+Tab 或 Ctrl+Alt+Del；这些仍需要可用的系统级 hook。
