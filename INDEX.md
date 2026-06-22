@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-22 实现 ThorTerminal 桌面连接多窗口流程](./sessions/2026-06-22-implement-thor-terminal-desktop-multiwindow-flow.md) — 完成桌面会话独立窗口、重复连接聚焦、主动断开关窗、用户关窗自动断开及状态事件同步。
 - [2026-06-22 实现 ThorTerminal JSON-RPC 通信协议](./sessions/2026-06-22-implement-thor-terminal-json-rpc.md) — 完成逐行 JSON-RPC 2.0、标准错误、通知语义及 Node/Rust 双端协议测试。
 - [2026-06-22 用剪映合成《山海经》完整视频并添加字幕](./sessions/2026-06-22-compose-shanhaijing-video-with-captions.md) — 将 95 段相邻分镜视频顺序拼接为 7 分 55 秒成片，加入 95 条同步字幕并由剪映导出核验。
 - [2026-06-22 安装 CapCut Mate](./sessions/2026-06-22-install-capcut-mate.md) — 在 Windows 本地完成 Python 与专用依赖安装，并通过 OpenAPI 请求验证服务可运行。
