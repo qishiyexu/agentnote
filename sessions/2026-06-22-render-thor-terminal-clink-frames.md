@@ -76,3 +76,10 @@
 - 修复为 `HashMap<String,String>` + `.query(&params)`，并将空 `vdCommand` 对齐官方 `JSON.stringify("")` 的字符串形态；保留服务端下发 `connectPath` / `statusPath`。
 - 已重新执行：`pnpm --filter @thor-terminal/sidecar test`、`pnpm build`、`cargo test --manifest-path src-tauri\\Cargo.toml`、`cargo clippy --manifest-path src-tauri\\Cargo.toml --all-targets -- -D warnings`、`pnpm tauri build --debug --no-bundle`。
 - 最新 debug 程序：`D:\Don\Projects\thor_terminal\src-tauri\target\debug\thor-terminal.exe`。
+
+## Sidecar `clink.node` 打包修复
+
+- 用户继续复测时出现 `clink.node` 不存在。直接运行 `src-tauri\binaries\thor-sidecar-x86_64-pc-windows-msvc.exe --clink-smoke` 复现：sidecar 只查找可执行文件相邻的 `src-tauri\binaries\lib\win32-x64`，而构建脚本只生成 exe，没有复制 native runtime。
+- 修复 `sidecar-app/scripts/build-sea.mjs`：SEA 注入完成后，将 `sidecar-app/lib/<platform-arch>` 递归复制到 `src-tauri/binaries/lib/<platform-arch>`，保持与 `src/clink.ts` 的现有加载逻辑一致。
+- 复验通过：`src-tauri\binaries\lib\win32-x64\clink.node` 存在；`--clink-smoke` 返回 `{"ok":true,...}` 并收到 clink callback；`pnpm --filter @thor-terminal/sidecar test` 4/4 通过；`pnpm tauri build --debug --no-bundle` 通过并再次复制 runtime。
+- 已重启 debug 程序 `D:\Don\Projects\thor_terminal\src-tauri\target\debug\thor-terminal.exe`，后续点击“连接”会使用修复后的 sidecar。
