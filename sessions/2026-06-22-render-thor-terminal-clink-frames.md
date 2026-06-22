@@ -127,3 +127,10 @@
 - 增加回归检查，防止重新引入按设置值直接跳过 DOM 键盘事件的条件。
 - 验证通过：`pnpm test` 3/3、`pnpm build`、`git diff --check`、`pnpm tauri build --debug --no-bundle`。
 - 此兼容修复不让 WebView 获得 Windows 截获的 Win、Alt+Tab 或 Ctrl+Alt+Del；这些仍需要可用的系统级 hook。
+
+## Tauri debug 构建拒绝访问
+
+- `pnpm tauri build --debug --no-bundle` 在 `tauri-build` 的 `remove_file(dest)` 报 Windows 错误 5“拒绝访问”，目标是准备重拷贝的 `target/debug/thor-sidecar.exe`。
+- 根因是上一轮 debug 程序仍在运行：`thor-terminal.exe` 启动的 `thor-sidecar.exe` 锁住了该目标文件；不是源码、Cargo 缓存或目录 ACL 问题。
+- 停止本项目的 `thor-terminal.exe` 和 `thor-sidecar.exe` 后，原构建命令直接成功，无需删除 `target` 或修改权限。
+- 后续重新构建 sidecar 时，先退出正在运行的 ThorTerminal debug 实例。
