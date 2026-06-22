@@ -90,3 +90,9 @@
 - 移除云桌面 Canvas 的 `cursor-none`，让客户端系统鼠标在窗口内保持可见。
 - 拦截 Canvas 的 `contextmenu` 默认行为；现有右键按下/抬起仍通过 `mouse-input` 发送到云桌面。
 - `pnpm build` 与 `git diff --check` 通过。
+
+## 点击坐标修复
+
+- clink 的 button press/release 分支接收 x/y，但最终只发送按钮状态；只有 mouse move 分支会更新远端指针位置。
+- Sidecar 现在把每个鼠标按下/抬起同步展开为“同坐标 move → button”，保证左键、右键和拖放结束位置与客户端指针一致。
+- 验证通过：Sidecar 测试 5/5、`pnpm build`、`pnpm sidecar:build`、`git diff --check`。
