@@ -9,7 +9,7 @@
 
 ## Sessions（按时间倒序）
 
-- [2026-06-22 持久化 ThorTerminal 窗口大小](./sessions/2026-06-22-persist-thor-terminal-window-size.md) — 主窗口与桌面窗口按各自 label 保存尺寸，并在下次创建时恢复。
+- [2026-06-22 持久化 ThorTerminal 窗口大小和位置](./sessions/2026-06-22-persist-thor-terminal-window-size.md) — 主窗口与桌面窗口按各自 label 保存尺寸和位置，并在下次创建时恢复。
 - [2026-06-22 持久化 ThorTerminal 登录态](./sessions/2026-06-22-persist-thor-terminal-login.md) — 登录结果跨应用重启保留，主动退出时清除，且不写入 Git 工作区。
 - [2026-06-22 渲染 ThorTerminal clink 返回画面](./sessions/2026-06-22-render-thor-terminal-clink-frames.md) — 接入 clink 图像帧，并修复连接窗口创建时序、早到首帧丢失、表单请求体及下发接口路径。
 - [2026-06-22 实现 ThorTerminal 桌面连接多窗口流程](./sessions/2026-06-22-implement-thor-terminal-desktop-multiwindow-flow.md) — 完成桌面会话独立窗口、重复连接聚焦、主动断开关窗、用户关窗自动断开及状态事件同步。
