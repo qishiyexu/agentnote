@@ -96,3 +96,10 @@
 - clink 的 button press/release 分支接收 x/y，但最终只发送按钮状态；只有 mouse move 分支会更新远端指针位置。
 - Sidecar 现在把每个鼠标按下/抬起同步展开为“同坐标 move → button”，保证左键、右键和拖放结束位置与客户端指针一致。
 - 验证通过：Sidecar 测试 5/5、`pnpm build`、`pnpm sidecar:build`、`git diff --check`。
+
+## 云桌面快捷键修复
+
+- Canvas 的 DOM 键盘事件只能收到 WebView 未拦截的按键；Ctrl、Alt、Win 等系统组合键可能先被 WebView 或本机系统处理，无法完整传入云桌面。
+- clink Windows 客户端模式已提供进程级 `key-hook`：窗口聚焦时启用后，原生低级键盘钩子把快捷键直接发送到当前云桌面；失焦或窗口关闭时必须关闭，以免继续截获本机输入。
+- ThorTerminal 现在按云桌面窗口焦点同步启停 `key-hook`，并处理初始焦点查询与焦点事件之间的竞态；Canvas 自动聚焦与原有 `key-input` 保留为钩子生效前的兜底。
+- 验证通过：新增 2 个键盘钩子焦点生命周期测试，`pnpm test` 2/2、`pnpm build`、`git diff --check` 均通过。
