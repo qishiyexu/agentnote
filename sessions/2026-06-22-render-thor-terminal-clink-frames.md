@@ -60,3 +60,19 @@
 - `D:\Don\Projects\thor_terminal\src\lib\desktopFrame.ts`
 - `D:\Don\Projects\thor_terminal\src\pages\DesktopWindowPage.tsx`
 - `D:\Don\Projects\thor_terminal\sidecar-app\src\rpc.ts`
+
+## 连接窗口错过首帧修复
+
+- 用户反馈点击“连接”后桌面窗口能进入等待状态，但云电脑画面没有出现。定位为首帧可能在桌面窗口 React 监听器挂载前已经通过 Tauri 事件发出，事件丢失后如果远端没有继续刷新，窗口会一直等待首帧。
+- 修复方式保持最小：Sidecar 在成功拉取 `desktop-frame` 时按 `desktop_id` 缓存最后一帧，新增 JSON-RPC `get_frame`；Rust 透传为 `get_desktop_frame` Tauri 命令；桌面窗口挂载后先订阅实时帧，再主动拉取一次缓存帧。
+- 断开连接时同步清理该桌面的帧缓存，避免重连显示旧画面。
+- 验证通过：`pnpm --filter @thor-terminal/sidecar test`、`pnpm build`、`cargo test --manifest-path src-tauri\Cargo.toml`、`cargo fmt --manifest-path src-tauri\Cargo.toml -- --check`、`cargo clippy --manifest-path src-tauri\Cargo.toml --all-targets -- -D warnings`、`pnpm tauri build --debug --no-bundle`。
+- 当前 debug 可执行文件：`D:\Don\Projects\thor_terminal\src-tauri\target\debug\thor-terminal.exe`。
+
+## 连接接口请求参数修复
+- 用户复测后仍提示“桌面连接已断开 / 请求参数不正确”，说明首帧缓存修复不是当前阻塞点，失败发生在 clink 配置下发前的业管 connect 接口。
+- 对照官方客户端 `ArkConnectionService.qml` 与 `ArkDesktopService.qml` 后确认：`api/desktop/client/connect` / `connectMaster` 的 `connectData` 使用 axios `params`，不是请求 body 表单。
+- ThorTerminal 原先在 `src-tauri/src/auth.rs` 中使用 `.form(&params)`，服务端收不到预期 query 参数，因此返回“请求参数不正确”。
+- 修复为 `HashMap<String,String>` + `.query(&params)`，并将空 `vdCommand` 对齐官方 `JSON.stringify("")` 的字符串形态；保留服务端下发 `connectPath` / `statusPath`。
+- 已重新执行：`pnpm --filter @thor-terminal/sidecar test`、`pnpm build`、`cargo test --manifest-path src-tauri\\Cargo.toml`、`cargo clippy --manifest-path src-tauri\\Cargo.toml --all-targets -- -D warnings`、`pnpm tauri build --debug --no-bundle`。
+- 最新 debug 程序：`D:\Don\Projects\thor_terminal\src-tauri\target\debug\thor-terminal.exe`。
