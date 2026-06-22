@@ -99,7 +99,8 @@
 
 ## 云桌面快捷键修复
 
-- Canvas 的 DOM 键盘事件只能收到 WebView 未拦截的按键；Ctrl、Alt、Win 等系统组合键可能先被 WebView 或本机系统处理，无法完整传入云桌面。
-- clink Windows 客户端模式已提供进程级 `key-hook`：窗口聚焦时启用后，原生低级键盘钩子把快捷键直接发送到当前云桌面；失焦或窗口关闭时必须关闭，以免继续截获本机输入。
-- ThorTerminal 现在按云桌面窗口焦点同步启停 `key-hook`，并处理初始焦点查询与焦点事件之间的竞态；Canvas 自动聚焦与原有 `key-input` 保留为钩子生效前的兜底。
-- 验证通过：新增 2 个键盘钩子焦点生命周期测试，`pnpm test` 2/2、`pnpm build`、`git diff --check` 均通过。
+- 用户明确要求不使用 clink 的 `key-hook`，改为对齐 `clouddesktop-qml/resource/app/view/clink/ClinkInput.qml` 的 `Keys.onPressed/onReleased` 实现。
+- 根因是 ThorTerminal 连接配置启用了 `qtMode=1`，但页面此前发送 WebView/Windows `keyCode`；普通字符部分碰巧相同，Ctrl、Alt、方向键、功能键等值域不同，导致快捷键失效。
+- 页面现在把 DOM `KeyboardEvent` 转换为 clink 原生 `qtKeyMap` 使用的 Qt 键值，再通过现有 `key-input` 发送；覆盖字符、左右修饰键、方向键、编辑键、F1-F12 和数字键盘 Enter/加/乘。
+- Canvas 在连接和鼠标进入时获取焦点，且不再启停 `key-hook`。不使用原生钩子时，Alt+Tab、Win+L 等被 Windows 截获的系统级快捷键仍无法由 WebView 转发。
+- 验证通过：Qt 键值回归测试、`pnpm build`、`git diff --check`、`pnpm tauri build --debug --no-bundle`；ThorTerminal 提交 `5733815`。

@@ -3,7 +3,7 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-06-22
+最后更新：2026-06-23
 
 ---
 
@@ -12,7 +12,7 @@
 - [2026-06-22 修复 Codex Windows sandbox helper 1223](./sessions/2026-06-22-fix-codex-windows-sandbox-helper-1223.md) — 移除本机 `[windows] sandbox = "elevated"`，避免 helper 走 UAC/提升链路触发 1223，并用真实环境 `codex doctor` 验证。
 - [2026-06-22 持久化 ThorTerminal 窗口大小和位置](./sessions/2026-06-22-persist-thor-terminal-window-size.md) — 主窗口与桌面窗口按各自 label 保存尺寸和位置，并在下次创建时恢复。
 - [2026-06-22 持久化 ThorTerminal 登录态](./sessions/2026-06-22-persist-thor-terminal-login.md) — 登录结果跨应用重启保留，主动退出时清除，且不写入 Git 工作区。
-- [2026-06-22 渲染 ThorTerminal clink 返回画面](./sessions/2026-06-22-render-thor-terminal-clink-frames.md) — 接入 clink 图像帧，并修复连接窗口创建时序、早到首帧丢失、表单请求体及下发接口路径。
+- [2026-06-22 渲染 ThorTerminal clink 返回画面](./sessions/2026-06-22-render-thor-terminal-clink-frames.md) — 接入 clink 图像帧，并修复连接、鼠标坐标及 Qt 键值输入。
 - [2026-06-22 实现 ThorTerminal 桌面连接多窗口流程](./sessions/2026-06-22-implement-thor-terminal-desktop-multiwindow-flow.md) — 完成桌面会话独立窗口、重复连接聚焦、主动断开关窗、用户关窗自动断开及状态事件同步。
 - [2026-06-22 实现 ThorTerminal JSON-RPC 通信协议](./sessions/2026-06-22-implement-thor-terminal-json-rpc.md) — 完成逐行 JSON-RPC 2.0、标准错误、通知语义及 Node/Rust 双端协议测试。
 - [2026-06-22 用剪映合成《山海经》完整视频并添加字幕](./sessions/2026-06-22-compose-shanhaijing-video-with-captions.md) — 将 95 段相邻分镜视频顺序拼接为 7 分 55 秒成片，加入 95 条同步字幕并由剪映导出核验。
