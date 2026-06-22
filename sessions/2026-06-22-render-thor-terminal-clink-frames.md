@@ -107,3 +107,6 @@
 - 后续复测确认物理 Win 键和 Ctrl+Alt+Del 仍失效。源码对照表明 Win 键不会稳定进入 WebView，而 Ctrl+Alt+Del 是 Windows Secure Attention Sequence，普通窗口不会收到；这不是 Qt 键值映射问题。
 - 按 `MobileKeyBoardUI.qml` 的虚拟组合键做法，在桌面窗口标题栏增加 `Win` 和 `Ctrl+Alt+Del` 按钮，直接向远端按顺序发送 key-down、再逆序发送 key-up，全程不启用 clink `key-hook`。
 - 新增组合键顺序回归测试，测试、前端构建和 Tauri debug 构建通过；ThorTerminal 提交 `553b408`。
+- 用户随后决定移除 `Win`、`Ctrl+Alt+Del` 远端按钮，改为设置页的“启用系统快捷键”复选框。
+- 该设置默认关闭并写入本机 `localStorage`；勾选后仅在已连接的云桌面窗口聚焦时启用 clink `key-hook`，失焦、取消勾选或窗口卸载时立即关闭。启用钩子期间不再重复发送 Canvas DOM 键盘事件。
+- 验证通过：键盘钩子焦点生命周期测试、Qt 键值测试、前端构建和 Tauri debug 构建；ThorTerminal 提交 `f7f6c79`。
