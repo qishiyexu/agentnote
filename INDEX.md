@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-06-22 修复 Codex Windows sandbox helper 1223](./sessions/2026-06-22-fix-codex-windows-sandbox-helper-1223.md) — 移除本机 `[windows] sandbox = "elevated"`，避免 helper 走 UAC/提升链路触发 1223，并用真实环境 `codex doctor` 验证。
 - [2026-06-22 持久化 ThorTerminal 窗口大小和位置](./sessions/2026-06-22-persist-thor-terminal-window-size.md) — 主窗口与桌面窗口按各自 label 保存尺寸和位置，并在下次创建时恢复。
 - [2026-06-22 持久化 ThorTerminal 登录态](./sessions/2026-06-22-persist-thor-terminal-login.md) — 登录结果跨应用重启保留，主动退出时清除，且不写入 Git 工作区。
 - [2026-06-22 渲染 ThorTerminal clink 返回画面](./sessions/2026-06-22-render-thor-terminal-clink-frames.md) — 接入 clink 图像帧，并修复连接窗口创建时序、早到首帧丢失、表单请求体及下发接口路径。
