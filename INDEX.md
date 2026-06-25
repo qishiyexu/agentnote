@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-06-23
+最后更新：2026-06-25
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-06-25 用剪映合成《山海经》02 的 5 秒片段草稿](./sessions/2026-06-25-compose-shanhaijing-02-5s-jianying-draft.md) — 将 74 段 Agnes 5 秒视频和结尾图写入剪映本地草稿，保存在草稿库中未导出。
 - [2026-06-24 用剪映合成《山海经》02 草稿并添加 narration 字幕](./sessions/2026-06-24-compose-shanhaijing-02-jianying-draft.md) — 将 38 段 Agnes 10 秒视频写入剪映本地草稿，按 75 条 narration 添加同步字幕并注册到本地草稿库。
 - [2026-06-23 修复 ThorTerminal 启动后窗口不显示](./sessions/2026-06-23-fix-thor-terminal-startup-window.md) — 启动初始化时显式恢复、显示并聚焦主窗口，并用冷启动 Win32 探针确认进入前台。
 - [2026-06-22 修复 Codex Windows sandbox helper 1223](./sessions/2026-06-22-fix-codex-windows-sandbox-helper-1223.md) — 移除本机 `[windows] sandbox = "elevated"`，避免 helper 走 UAC/提升链路触发 1223，并用真实环境 `codex doctor` 验证。
