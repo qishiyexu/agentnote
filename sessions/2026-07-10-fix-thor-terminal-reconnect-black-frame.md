@@ -42,3 +42,11 @@
 修复是在新 session 写入 `sessions` 和 `desktopByContext` 前调用 `closedContexts.delete(context)`，明确让被原生复用的 context 重新生效。增加了回归断言，确认新 session 注册顺序不会再次漏掉该状态转换。代码提交：`d42e793 fix: 允许重连复用 clink context`。
 
 自动验证结果仍为：根目录 `pnpm test` 70/70、Sidecar `pnpm test` 24/24、Rust `cargo test` 40/40，`pnpm build` 与 `pnpm sidecar:build` 均通过。真实第二次连接由 Don 手动验收。
+
+## 后续回归：多次连接后提示管道正在被关闭
+
+Don 连续测试多轮后，应用提示 `管道正在被关闭 (os error 232)`。现场日志显示同一次断开对同一个 context 连续发送了四种 `stop` 包，随后 Sidecar 以 Windows `0xC0000005` 访问冲突退出；Rust 仍向已退出进程的旧 stdin 写入，因而暴露错误 232。
+
+对照正式 QML 客户端确认其断开路径只调用一次 `notify("stop")`，协议为 `type=101`、`channelName="clink"`。ThorTerminal 删除 ctest 风格和两条兼容性 stop，仅保留这一条正式协议；同时允许 `connect` 在 Sidecar 已退出或写管道失败时重启并重试一次，避免原生进程异常时把断管错误直接显示给用户。代码提交：`dc0eefe fix: 防止重复断开导致 sidecar 崩溃`。
+
+回归检查先在旧实现上确认失败，修复后根目录 `pnpm test` 70/70、Sidecar `pnpm test` 24/24、Rust `cargo test --lib` 41/41 全部通过，`pnpm sidecar:build` 成功生成新的 Windows SEA Sidecar。真实连续连接/断开仍由 Don 手动验收。
