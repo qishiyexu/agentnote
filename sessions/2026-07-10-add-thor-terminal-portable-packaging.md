@@ -39,3 +39,9 @@ pnpm package
 ## 验收边界
 
 本轮对 Windows x64 做了完整产物和启动验证。macOS/Linux 分支使用同一脚本与目录协议，但仍需在对应宿主机准备匹配的原生 runtime 后各跑一次 `pnpm package`；缺少 runtime 时脚本会拒绝产出不完整的包。
+
+## 后续修复：启动时连续闪现控制台窗口
+
+Windows release 主程序使用 GUI subsystem，但启动时读取设备标识会依次运行 `reg.exe`，登录阶段还会通过同一个 `command_output` 入口运行 `wmic.exe`、`getmac.exe` 和 `ipconfig.exe`。这些控制台程序原先没有设置 `CREATE_NO_WINDOW`，因此从 Portable EXE 启动时会短暂创建并关闭多个控制台窗口；Sidecar 由 `tauri-plugin-shell` 启动，库内原本已经使用该标志，不是弹窗来源。
+
+修复在认证模块所有系统命令共用的 `command_output` 入口统一设置 Windows `CREATE_NO_WINDOW`，不改变其他平台。Win32 探针以 10 ms 间隔枚举新增可见 `ConsoleWindowClass`：旧包稳定捕获到 `reg.exe`，计数为 1；重打包后同一探针计数为 0。`cargo test --lib` 41/41、完整 `pnpm package` 和包内 clink smoke test 通过。
