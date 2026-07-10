@@ -34,3 +34,11 @@
 ## 验收边界
 
 当前自动验证覆盖连接生命周期、首帧门控、原生 C++ 编译、SEA 打包和 RPC 启动；最终仍应在有真实云桌面的环境中连续连接/断开多轮，目视确认连接耗时不再累积且画面没有黑块。
+
+## 后续回归：第二次连接卡在 session 创建中
+
+首轮修复后，真实环境暴露出更直接的二次连接问题：第一次断开后，clink 很快复用了相同的 context 指针；Sidecar 仍将该指针保留在 `closedContexts` 60 秒，并在消息入口丢弃该 context 的全部回调。因此原生侧第二次连接实际上已依次进入 Connecting、Connected、FirstImage，代理层却始终停留在“返回状态：session 已创建”。
+
+修复是在新 session 写入 `sessions` 和 `desktopByContext` 前调用 `closedContexts.delete(context)`，明确让被原生复用的 context 重新生效。增加了回归断言，确认新 session 注册顺序不会再次漏掉该状态转换。代码提交：`d42e793 fix: 允许重连复用 clink context`。
+
+自动验证结果仍为：根目录 `pnpm test` 70/70、Sidecar `pnpm test` 24/24、Rust `cargo test` 40/40，`pnpm build` 与 `pnpm sidecar:build` 均通过。真实第二次连接由 Don 手动验收。

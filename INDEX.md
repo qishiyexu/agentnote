@@ -9,7 +9,7 @@
 
 ## Sessions（按时间倒序）
 
-- [2026-07-10 修复 ThorTerminal 多次连接后变慢和画面黑块](./sessions/2026-07-10-fix-thor-terminal-reconnect-black-frame.md) — 串行化 clink 旧会话清理，并让 Windows 原生渲染器等完整首帧后再显示，避免上下文堆叠和局部黑屏。
+- [2026-07-10 修复 ThorTerminal 多次连接后变慢和画面黑块](./sessions/2026-07-10-fix-thor-terminal-reconnect-black-frame.md) — 串行化旧会话清理、恢复被复用 context 的回调，并让原生渲染器等完整首帧后显示，避免二次连接卡住和局部黑屏。
 - [2026-06-29 修复 storyboard 缩略图拖拽、持久化和预览](./sessions/2026-06-29-fix-storyboard-thumbnail-preview-persistence.md) — 统一缩略图保存到原图目录，修复拖拽上传、删除同步和重启后预览显示。
 - [2026-06-25 用剪映合成《山海经》02 的 5 秒片段草稿](./sessions/2026-06-25-compose-shanhaijing-02-5s-jianying-draft.md) — 将 74 段 Agnes 5 秒视频和结尾图写入剪映本地草稿，保存在草稿库中未导出。
 - [2026-06-24 用剪映合成《山海经》02 草稿并添加 narration 字幕](./sessions/2026-06-24-compose-shanhaijing-02-jianying-draft.md) — 将 38 段 Agnes 10 秒视频写入剪映本地草稿，按 75 条 narration 添加同步字幕并注册到本地草稿库。
