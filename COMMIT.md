@@ -7,4 +7,6 @@ docs:      <说明>                   README/AGENTS/INDEX 等元文档
 chore:     <说明>                   其它杂项
 ```
 
-**每次离开仓库前必须 `git push`**，否则换机器就丢了。
+- 每次离开仓库前必须 `git push`，否则换机器就丢了。
+
+- 提交的commit message用中文，写清楚提交的内容，实现思路。
