@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-07-11 为 ThorTerminal 增加服务器 HTML 报告](./sessions/2026-07-11-add-thor-terminal-server-report.md) — 从现有 SSH 配置选择一台 Linux 服务器，采集软硬件、系统参数和软件服务信息并生成独立精美 HTML 报告。
 - [2026-07-11 调整 ThorTerminal 侧边栏菜单名称](./sessions/2026-07-11-rename-thor-terminal-navigation.md) — 将“终端”一级菜单改为“服务器”，并将“取日志”二级菜单改为“取云桌面日志”。
 - [2026-07-11 让 ThorTerminal 服务器日志目录时间精确到秒](./sessions/2026-07-11-thor-terminal-server-log-directory-seconds.md) — 批量收集目录改为本地时间 `server_log_YYYY-MM-DD_HH-mm-ss`，避免同日任务共用一个目录。
 - [2026-07-10 为 ThorTerminal 增加独立数据目录](./sessions/2026-07-10-add-thor-terminal-data-directory.md) — 保留原配置目录，新增独立数据目录，并统一日志下载、批量服务器日志和运行日志的落盘位置。
