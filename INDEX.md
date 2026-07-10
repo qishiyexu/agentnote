@@ -3,12 +3,13 @@
 > 所有文档的入口。任何 Agent 接手仓库时，读完 [AGENTS.md](./AGENTS.md) 后从这里出发。
 > **每次新增/重命名文档，请同步更新本文件。**
 
-最后更新：2026-07-10
+最后更新：2026-07-11
 
 ---
 
 ## Sessions（按时间倒序）
 
+- [2026-07-11 让 ThorTerminal 服务器日志目录时间精确到秒](./sessions/2026-07-11-thor-terminal-server-log-directory-seconds.md) — 批量收集目录改为本地时间 `server_log_YYYY-MM-DD_HH-mm-ss`，避免同日任务共用一个目录。
 - [2026-07-10 为 ThorTerminal 增加独立数据目录](./sessions/2026-07-10-add-thor-terminal-data-directory.md) — 保留原配置目录，新增独立数据目录，并统一日志下载、批量服务器日志和运行日志的落盘位置。
 - [2026-07-10 为 ThorTerminal 添加服务器日志收集](./sessions/2026-07-10-add-thor-terminal-server-log-collection.md) — 从 SSH 配置选择服务器，维护带文件名通配符的日志项，并通过单次 SFTP 连接批量下载匹配日志。
 - [2026-07-10 为 ThorTerminal 更换程序图标](./sessions/2026-07-10-set-thor-terminal-app-icon.md) — 选定雷神锤与终端提示符组合图标，生成全套桌面平台尺寸并验证嵌入 Windows 可执行文件。
