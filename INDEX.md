@@ -78,6 +78,7 @@
 
 ## References
 
+- [常见虚拟化组件日志路径](./references/virtualization-log-paths.md) — 汇总 libvirt、OpenStack、Open vSwitch、Ceph、Xen、Proxmox 与 VMware ESXi 的常见文件日志位置。
 - [Alpine Linux OpenRC](./references/alpine-openrc.md) — Alpine 官方的 OpenRC 服务管理说明，用于服务器报告兼容 `rc-status`。
 - [Alpine Package Keeper](./references/alpine-apk.md) — Alpine 官方的 apk 包管理说明，用于服务器报告兼容软件包清单。
 - [Void Linux runit](./references/void-runit.md) — Void 官方的 runit 服务管理说明，用于服务器报告兼容 `sv status` 与 `/var/service`。

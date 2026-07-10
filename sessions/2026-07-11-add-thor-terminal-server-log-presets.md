@@ -12,10 +12,13 @@
 - Web 与数据库日志路径使用文件名通配符同时匹配当前日志和轮转日志，不扩大后端现有“通配符只允许出现在文件名中”的边界。
 - 新增中英文文案和回归检查，确认预设日志项使用当前选中的 SSH 服务器。
 - 代码提交：`1d6d025 feat: 为服务器日志收集增加常用路径预设`。
+- 按后续反馈增加 libvirt / QEMU、Open vSwitch、OpenStack Nova / Neutron、Ceph、Xen、Proxmox 和 VMware ESXi 常用日志预设。
+- 依据当前厂商文档将 ESXi 组件日志指向 `/var/run/log`；保留手动路径入口处理 journald、容器化或自定义日志目录。
+- 虚拟化预设提交：`6c4d87f feat: 补充虚拟化组件日志预设`。
 
 ## 结论
 
-预设只是常用路径的快捷入口，手动填写名称和路径的原有流程继续保留；无需新增后端接口、配置结构或依赖。
+预设只是常用路径的快捷入口，手动填写名称和路径的原有流程继续保留；无需新增后端接口、配置结构或依赖。现代组件若默认写入 journald，现有文件收集器不会执行命令导出，需要使用已有系统日志文件预设或手动填写实际文件路径。
 
 ## 验证
 
@@ -33,7 +36,8 @@
 - 修改：`D:\Don\Projects\thor_terminal\src\i18n.ts`
 - 修改：`D:\Don\Projects\thor_terminal\test\serverLogCollection.test.ts`
 - 新增：`C:\Don\personal\agentnote\sessions\2026-07-11-add-thor-terminal-server-log-presets.md`
+- 新增：`C:\Don\personal\agentnote\references\virtualization-log-paths.md`
 
 ## 引用
 
-- 无外部引用。
+- [常见虚拟化组件日志路径](../references/virtualization-log-paths.md)
