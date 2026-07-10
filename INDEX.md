@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-07-10 为 ThorTerminal 添加服务器日志收集](./sessions/2026-07-10-add-thor-terminal-server-log-collection.md) — 从 SSH 配置选择服务器，维护带文件名通配符的日志项，并通过单次 SFTP 连接批量下载匹配日志。
 - [2026-07-10 为 ThorTerminal 更换程序图标](./sessions/2026-07-10-set-thor-terminal-app-icon.md) — 选定雷神锤与终端提示符组合图标，生成全套桌面平台尺寸并验证嵌入 Windows 可执行文件。
 - [2026-07-10 为 ThorTerminal SSH 标签添加通道复制和属性设置](./sessions/2026-07-10-add-thor-terminal-ssh-tab-copy-properties.md) — 右键 SSH 标签可复制独立通道，并即时设置当前终端的字体、字号和前后景颜色。
 - [2026-07-10 为 ThorTerminal SSH 快捷命令添加分组参数](./sessions/2026-07-10-add-thor-terminal-ssh-snippet-groups.md) — 支持分组 CRUD、每组两个参数，以及执行快捷命令时展开 `{arg1}`、`{arg2}`。
