@@ -14,6 +14,9 @@
 - 保持既有 SFTP 整文件传输协议，不为尚不存在的分块进度额外引入状态机或依赖。
 - 增加中英文界面文案、Rust 指标解析单元测试和前端结构回归检查。
 - 代码提交：`fbc66f8 feat: 增加 SSH 监控和传输工具面板`。
+- 按反馈将三个工具改为独立开关，默认同时显示上方 Snippets 和右下角监控；SFTP 面板开启时插在二者之间。布局提交：`71ca76e fix: 调整 SSH 右侧工具面板布局`。
+- 移除监控标题下方的“每 5 秒自动刷新”提示，保留后台刷新周期。提交：`ad101ca fix: 移除监控刷新提示`。
+- 移除监控面板内部标题，底栏“监控”入口文字继续保留。提交：`d295edc fix: 移除监控面板标题`。
 
 ## 结论
 
@@ -25,7 +28,7 @@
 - `pnpm build`：通过，仅保留既有 chunk size 提示。
 - `cargo test --manifest-path src-tauri\Cargo.toml`：45/45 通过，仅保留既有 `SidecarManager::restart` 未使用提示。
 - `git diff --check`：通过。
-- 已推送 `thor_terminal/main`：`fbc66f8`。
+- 已推送 `thor_terminal/main`：`d295edc`。
 
 ## 待办
 
