@@ -18,18 +18,19 @@
 - 移除监控标题下方的“每 5 秒自动刷新”提示，保留后台刷新周期。提交：`ad101ca fix: 移除监控刷新提示`。
 - 移除监控面板内部标题，底栏“监控”入口文字继续保留。提交：`d295edc fix: 移除监控面板标题`。
 - 移除 SSH 配置卡上的 SFTP 按钮；底栏 SFTP 入口改为复制当前 SSH Tab 配置并新建 SFTP Tab，传输列表固定放在文件列表下方。提交：`892a2bb feat: 将 SFTP 入口移至 SSH 会话`。
+- 将 SFTP 上传和下载改为 256 KiB 分块传输，Rust 后端按任务 ID 广播已传字节和总字节；每个活动文件在传输列表中显示真实百分比和独立进度条。提交：`163bdea feat: 为 SFTP 文件传输显示真实进度`。
 
 ## 结论
 
-服务器监控只在监控面板可见时工作，并复用已有 SSH 登录态，不会每 5 秒重新登录。磁盘数据当前以服务器根文件系统 `/` 为准；SFTP Tab 在文件列表下方显示活动传输，不伪造无法从现有整文件 API 获得的百分比进度。
+服务器监控只在监控面板可见时工作，并复用已有 SSH 登录态，不会每 5 秒重新登录。磁盘数据当前以服务器根文件系统 `/` 为准；SFTP Tab 在文件列表下方显示活动传输，上传与下载进度均由后端实际完成的分块读写字节驱动。
 
 ## 验证
 
-- `pnpm test`：89/89 通过。
+- `pnpm test`：90/90 通过。
 - `pnpm build`：通过，仅保留既有 chunk size 提示。
 - `cargo test --manifest-path src-tauri\Cargo.toml`：45/45 通过，仅保留既有 `SidecarManager::restart` 未使用提示。
 - `git diff --check`：通过。
-- 已推送 `thor_terminal/main`：`892a2bb`。
+- 已推送 `thor_terminal/main`：`163bdea`。
 
 ## 待办
 
