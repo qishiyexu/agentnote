@@ -18,6 +18,9 @@
 - 收集成功提示后增加“打开”按钮，复用现有跨平台目录打开函数直接打开本次下载目录。
 - 服务器选择框按最终反馈继续与名称、路径和添加按钮保持同一行。
 - 交互优化提交：`6ae4767 feat: 优化服务器日志收集交互，支持行内编辑和打开目录`。
+- 每个日志项增加独立勾选框和“批量收集”按钮；批量操作只选择一次目标目录，逐项收集，单项失败不会阻断后续项。
+- 批量结果汇总下载文件数和失败明细，并继续提供“打开”目标目录按钮；下载同名文件时复用唯一文件名逻辑，避免覆盖已有日志。
+- 批量收集提交：`a3e8dda feat: 为服务器日志收集增加勾选批量下载`。
 
 ## 结论
 
@@ -26,7 +29,7 @@
 ## 验证
 
 - `pnpm build`：通过。
-- `pnpm test`：77/77 通过。
+- `pnpm test`：78/78 通过。
 - `cargo test`：42/42 通过。
 - `git diff --check`：通过。
 - 未连接真实服务器下载生产日志；SSH 登录、SFTP 连接和文件读取复用已通过现有测试覆盖的链路。
@@ -48,6 +51,7 @@
 - 修改：`D:\Don\Projects\thor_terminal\src\lib\configStore.ts`
 - 修改：`D:\Don\Projects\thor_terminal\src\i18n.ts`
 - 修改：`D:\Don\Projects\thor_terminal\test\sshConfigs.test.ts`
+- 新增：`D:\Don\Projects\thor_terminal\test\serverLogCollection.test.ts`
 
 ## 引用
 
