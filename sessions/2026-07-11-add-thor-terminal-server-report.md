@@ -15,6 +15,9 @@
 - 报告生成成功后显示“打开”按钮，由本地命令解析报告文件的父目录并调用系统文件管理器打开。
 - HTML 报告的每个章节增加复制按钮，优先使用 Clipboard API，并为本地 `file://` 打开场景保留 `execCommand` 回退；按钮会短暂显示复制成功或失败状态。
 - 对远端输出统一 HTML 转义，设置 12 MiB 输出上限和 120 秒采集超时；权限不足或命令缺失只在对应章节标注，不把 ThorTerminal 保存的 SSH 密码、私钥或远端环境变量写入报告。
+- 通过 `sh -s` 上传并执行 POSIX 脚本，避免 fish、csh 等登录 shell 破坏脚本语法；发行版信息兼容 `/etc/os-release`、`/usr/lib/os-release` 和常见旧式 release 文件。
+- 软件包清单覆盖 Debian/Ubuntu、RPM 系、Alpine、Arch、Void、Gentoo、NixOS、OpenWrt/opkg、Clear Linux 和 Slackware；服务清单覆盖 systemd、OpenRC、runit 和 SysV。
+- 对缺少 `free`、`ip`、`ss`、`lsmod` 等工具的最小 Linux 环境增加 `/proc` 或传统命令回退，并修复非 GNU `ps` 下的进程列表降级。
 - 增加前端流程回归检查和 Rust 报告解析、HTML 转义检查。
 
 ## 结论
@@ -25,9 +28,11 @@
 
 - `pnpm test`：86/86 通过。
 - `pnpm build`：通过，仅保留既有 chunk size 提示。
-- `cargo test --manifest-path src-tauri\Cargo.toml`：43/43 通过。
+- `cargo test --manifest-path src-tauri\Cargo.toml`：44/44 通过。
+- Ubuntu 20.04 WSL 实际执行采集脚本：退出码 0，10/10 个章节均生成。
+- BusyBox `sh -n`：语法检查通过。
 - `git diff --check`：通过。
-- 未选择真实生产服务器执行采集；远程命令链路复用现有 SSH 连接实现，生成器与转义逻辑已由本地回归检查覆盖。
+- 未逐个启动全部发行版镜像验证；本机 Docker 引擎未运行。兼容分支由回归测试覆盖，Ubuntu/BusyBox 路径已执行验证。
 
 ## 待办
 
@@ -44,4 +49,6 @@
 
 ## 引用
 
-- 无外部引用。
+- [Alpine Linux OpenRC](../references/alpine-openrc.md)
+- [Alpine Package Keeper](../references/alpine-apk.md)
+- [Void Linux runit](../references/void-runit.md)

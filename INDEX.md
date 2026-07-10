@@ -77,6 +77,9 @@
 
 ## References
 
+- [Alpine Linux OpenRC](./references/alpine-openrc.md) — Alpine 官方的 OpenRC 服务管理说明，用于服务器报告兼容 `rc-status`。
+- [Alpine Package Keeper](./references/alpine-apk.md) — Alpine 官方的 apk 包管理说明，用于服务器报告兼容软件包清单。
+- [Void Linux runit](./references/void-runit.md) — Void 官方的 runit 服务管理说明，用于服务器报告兼容 `sv status` 与 `/var/service`。
 - [CapCut Mate](./references/capcut-mate.md) — 基于 FastAPI 的剪映草稿自动化 API 及其 Windows 本地安装方式。
 - [Ponytail](./references/ponytail.md) — 为 Codex 提供持续任务推进、会话钩子和配套技能的插件。
 - [Name Dungeon](./references/name-dungeon.md) — 支持通过 `?name=` 参数接收精灵名字的网页游戏。
