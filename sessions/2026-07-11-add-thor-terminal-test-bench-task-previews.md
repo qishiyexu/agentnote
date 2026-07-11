@@ -33,6 +33,7 @@
 - 画面窗口使用独立 `/test-task-display/:desktopId` 路由和 `desktop-test-*` 窗口标签，不接管正常云桌面会话，也不改变每个测试任务独占 Sidecar 的结构。
 - 新增 1 小时时间跨度和画面窗口生命周期回归检查；完整前端 105 项测试、生产构建和 Rust 45 项测试通过。
 - ThorTerminal 提交：`f40f5d7 feat: 增加测试任务画面窗口和一小时曲线`。
+- 运行时出现 `Command open_test_task_window not found`，检查确认源码和 `invoke_handler` 已注册，但正在运行的 `thor-terminal.exe` 启动于提交前，二进制中不包含该命令。停止旧主进程及其 Sidecar、执行 `pnpm tauri build --debug --no-bundle` 后重启；新进程二进制已包含命令，前端 105 项测试再次通过。
 
 ## 结论
 
