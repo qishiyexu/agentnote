@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-07-11 修复 ThorTerminal 多 SSH 标签配置和重复提示符](./sessions/2026-07-11-fix-thor-terminal-multiple-ssh-tabs.md) — 让第二个 SSH 标签即时读到会话配置，并清理异步注册竞态导致的重复输出监听器。
 - [2026-07-11 为 ThorTerminal SSH 窗口增加监控和传输工具面板](./sessions/2026-07-11-add-thor-terminal-ssh-monitor-tools.md) — 底部工具栏可切换 Snippets、Linux 服务器资源监控和当前 SFTP 传输列表。
 - [2026-07-11 为 ThorTerminal 增加服务器日志路径预设](./sessions/2026-07-11-add-thor-terminal-server-log-presets.md) — 选择 SSH 服务器后可从常见 Linux 系统、Web 和数据库日志路径中快速新增日志项。
 - [2026-07-11 为 ThorTerminal 增加服务器 HTML 报告](./sessions/2026-07-11-add-thor-terminal-server-report.md) — 从现有 SSH 配置选择一台 Linux 服务器，采集软硬件、系统参数和软件服务信息并生成独立精美 HTML 报告。
