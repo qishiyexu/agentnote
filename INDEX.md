@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-07-11 ThorTerminal 日志导出后打开所在目录](./sessions/2026-07-11-open-thor-terminal-exported-log-directory.md) — 设置页日志导出成功后可直接打开导出 zip 所在目录。
 - [2026-07-11 移除 ThorTerminal 程序图标背景色](./sessions/2026-07-11-remove-thor-terminal-icon-background.md) — 将雷神锤终端图标改为透明背景，并同步替换侧边栏的“T”占位图标。
 - [2026-07-11 让 ThorTerminal SSH 配置在原卡片就地编辑](./sessions/2026-07-11-edit-thor-terminal-ssh-config-in-place.md) — 点击编辑后直接用表单替换原配置卡片，新增卡片保持独立。
 - [2026-07-11 修复 ThorTerminal 多 SSH 标签配置和重复提示符](./sessions/2026-07-11-fix-thor-terminal-multiple-ssh-tabs.md) — 让第二个 SSH 标签即时读到会话配置，并清理异步注册竞态导致的重复输出监听器。
