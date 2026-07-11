@@ -14,15 +14,16 @@
 - 连接持续时间使用毫秒；留空时只连接一次并保持连接，填写后按“保持连接、断开、等待重连间隔、重新连接”循环。
 - 点击“自动重连”后，任务进入下方运行列表，显示连接状态、循环次数、错误、停止操作和虚机画面缩略图。
 - 缩略图每秒拉取最新帧，并复用现有 `drawDesktopFrame` 解码及绘制逻辑。
-- 所有测试任务共用一个 `thor-sidecar` 进程；任务区显示该进程的 PID，并每秒采样 CPU、RSS 内存和文件 I/O。
+- 每个测试任务独占一个 `thor-sidecar` 进程；各任务卡分别显示自己的 PID，并每秒采样对应进程的 CPU、RSS 内存和文件 I/O。
 - Sidecar 使用 Node 内置的 `process.cpuUsage()`、`process.memoryUsage()` 和 `process.resourceUsage()` 返回累计值；前端按相邻采样差计算 CPU 百分比和 I/O 操作数/秒，保留最近 60 个点绘制滚动曲线。
-- 新增 `process_metrics` JSON-RPC 方法和 `test_bench_process_metrics` Tauri 命令，没有引入新的运行时依赖。
+- 新增 `process_metrics` JSON-RPC 方法；Rust 为测试任务按桌面 ID 维护独立 `SidecarManager`，画面、连接和资源采样都走任务专属命令，没有影响虚拟应用仍在使用的共享连接链路。
+- 停止任务时从任务进程表移除对应 Sidecar 并终止进程；循环重连只断开会话并保留该任务进程。
 - 使用 `AbortController` 停止等待和重连循环，并处理连接尚未完成时点击停止的竞态。
 - 新增回归检查；前端 100 项、Sidecar 24 项和 Rust 45 项测试通过，`pnpm build` 与 Sidecar SEA 构建通过，并用新 EXE 实测 `process_metrics` 返回有效指标。
 
 ## 结论
 
-测试台现在同时支持一次性保持连接和定时重连压力测试；运行任务区能在同一页面观察状态、最新虚机画面，以及共享测试进程的 PID 和资源趋势。
+测试台现在同时支持一次性保持连接和定时重连压力测试；每项任务有独立进程和独立资源趋势，停止任务会同步回收该进程。
 
 ## 待办
 
