@@ -9,6 +9,7 @@
 
 ## Sessions（按时间倒序）
 
+- [2026-07-11 移除 ThorTerminal 程序图标背景色](./sessions/2026-07-11-remove-thor-terminal-icon-background.md) — 保留雷神锤终端主体，将深色背景改为透明并重新生成桌面图标。
 - [2026-07-11 让 ThorTerminal SSH 配置在原卡片就地编辑](./sessions/2026-07-11-edit-thor-terminal-ssh-config-in-place.md) — 点击编辑后直接用表单替换原配置卡片，新增卡片保持独立。
 - [2026-07-11 修复 ThorTerminal 多 SSH 标签配置和重复提示符](./sessions/2026-07-11-fix-thor-terminal-multiple-ssh-tabs.md) — 让第二个 SSH 标签即时读到会话配置，并清理异步注册竞态导致的重复输出监听器。
 - [2026-07-11 为 ThorTerminal SSH 窗口增加监控和传输工具面板](./sessions/2026-07-11-add-thor-terminal-ssh-monitor-tools.md) — 底部工具栏可切换 Snippets、Linux 服务器资源监控和当前 SFTP 传输列表。
